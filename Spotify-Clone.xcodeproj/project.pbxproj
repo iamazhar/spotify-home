@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF635A2224375DE1009E5116 /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF635A2124375DE1009E5116 /* ConnectButton.swift */; };
+		FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FE82437879A00723D3F /* LogInViewController.swift */; };
+		FF106FEB2437937200723D3F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; };
+		FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF106FED243793A800723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FF12437958D00723D3F /* SpotifyAuthService.swift */; };
+		FFA929112437A29D0006F5CA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA929102437A29D0006F5CA /* Common.swift */; };
+		FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; };
+		FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFD662B62437222D00C0C3D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD662B52437222D00C0C3D6 /* AppDelegate.swift */; };
 		FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */; };
 		FFD662BA2437222D00C0C3D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD662B92437222D00C0C3D6 /* ViewController.swift */; };
@@ -35,8 +43,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FFBD70C72437835400E6AD9A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */,
+				FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBD70C92437841400E6AD9A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */,
+				FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		FF635A2124375DE1009E5116 /* ConnectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
+		FF106FE82437879A00723D3F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FF106FEA2437937200723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FF106FED243793A800723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FF106FF12437958D00723D3F /* SpotifyAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthService.swift; sourceTree = "<group>"; };
+		FFA929102437A29D0006F5CA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
+		FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		FFD662B22437222D00C0C3D6 /* Spotify-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD662B52437222D00C0C3D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +100,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD662E62437249000C0C3D6 /* SpotifyiOS.framework in Frameworks */,
+				FF106FEB2437937200723D3F /* Alamofire.framework in Frameworks */,
+				FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,15 +122,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF106FEF2437955700723D3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFD662B92437222D00C0C3D6 /* ViewController.swift */,
+				FF106FE82437879A00723D3F /* LogInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FF106FF02437957000723D3F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF106FF12437958D00723D3F /* SpotifyAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FFA9290F2437A2830006F5CA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFA929102437A29D0006F5CA /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FFBD70C32437835300E6AD9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF106FEA2437937200723D3F /* Alamofire.framework */,
+				FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FFD662A92437222D00C0C3D6 = {
 			isa = PBXGroup;
 			children = (
+				FF106FED243793A800723D3F /* Alamofire.framework */,
+				FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */,
 				FFD662E72437262500C0C3D6 /* Spotify-Clone-Bridging-Header.h */,
 				FFD662B42437222D00C0C3D6 /* Spotify-Clone */,
 				FFD662CB2437223100C0C3D6 /* Spotify-CloneTests */,
 				FFD662D62437223100C0C3D6 /* Spotify-CloneUITests */,
 				FFD662B32437222D00C0C3D6 /* Products */,
 				FFD662E52437249000C0C3D6 /* SpotifyiOS.framework */,
+				FFBD70C32437835300E6AD9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,13 +184,14 @@
 		FFD662B42437222D00C0C3D6 /* Spotify-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				FFA9290F2437A2830006F5CA /* Common */,
+				FF106FF02437957000723D3F /* Services */,
+				FF106FEF2437955700723D3F /* Controllers */,
+				FFD662BE2437223100C0C3D6 /* Assets.xcassets */,
 				FFD662B52437222D00C0C3D6 /* AppDelegate.swift */,
 				FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */,
-				FFD662B92437222D00C0C3D6 /* ViewController.swift */,
-				FFD662BE2437223100C0C3D6 /* Assets.xcassets */,
 				FFD662C02437223100C0C3D6 /* LaunchScreen.storyboard */,
 				FFD662C32437223100C0C3D6 /* Info.plist */,
-				FF635A2124375DE1009E5116 /* ConnectButton.swift */,
 			);
 			path = "Spotify-Clone";
 			sourceTree = "<group>";
@@ -144,6 +224,9 @@
 				FFD662AE2437222D00C0C3D6 /* Sources */,
 				FFD662AF2437222D00C0C3D6 /* Frameworks */,
 				FFD662B02437222D00C0C3D6 /* Resources */,
+				FFBD70C72437835400E6AD9A /* Embed Frameworks */,
+				FFBD70C82437837E00E6AD9A /* ShellScript */,
+				FFBD70C92437841400E6AD9A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -259,14 +342,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FFBD70C82437837E00E6AD9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SpotifyLogin.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FFD662AE2437222D00C0C3D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF635A2224375DE1009E5116 /* ConnectButton.swift in Sources */,
+				FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */,
 				FFD662BA2437222D00C0C3D6 /* ViewController.swift in Sources */,
 				FFD662B62437222D00C0C3D6 /* AppDelegate.swift in Sources */,
+				FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */,
+				FFA929112437A29D0006F5CA /* Common.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +544,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Spotify-Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -462,6 +570,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Spotify-Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
