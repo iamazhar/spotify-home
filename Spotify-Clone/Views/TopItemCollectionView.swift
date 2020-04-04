@@ -27,6 +27,8 @@ class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
     }
     
     fileprivate func setupLayout() {
+        self.backgroundColor = .clear
+        
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         layout.minimumLineSpacing = 10

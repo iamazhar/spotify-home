@@ -10,26 +10,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    private let topItemView: TopItemCollectionView = {
-        let view = TopItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-        
+    private lazy var tableView: HomeTableView = {
+        let tv = HomeTableView(frame: .zero, style: .plain)
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        return tv
+    }() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundGradient() //
         
-        view.addSubview(topItemView)
+        view.addSubview(tableView)
         NSLayoutConstraint.activate([
-            topItemView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
-            topItemView.heightAnchor.constraint(equalToConstant: 150),
-            topItemView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            topItemView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        topItemView.backgroundColor = UIColor.clear
+        tableView.backgroundColor = UIColor.clear
         
         
         SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, error) in
@@ -42,9 +41,9 @@ class HomeViewController: UIViewController {
             print(userTracks)
             
             DispatchQueue.main.async {
-                self.topItemView.tracks = userTracks
+                self.tableView.tracks = userTracks
                 DispatchQueue.main.async {
-                    self.topItemView.reloadData()
+                    self.tableView.reloadData()
                 }
             }
         }
@@ -52,11 +51,11 @@ class HomeViewController: UIViewController {
     }
     
     fileprivate func setupBackgroundGradient() {
-           let layer = CAGradientLayer()
-           layer.frame = view.frame
-           layer.colors = [UIColor.homeBgGradientTop().cgColor, UIColor.homeBgGradientBottom().cgColor]
-           layer.locations = [0.0, 0.35]
-           view.layer.addSublayer(layer)
-       }
-
+        let layer = CAGradientLayer()
+        layer.frame = view.frame
+        layer.colors = [UIColor.homeBgGradientTop().cgColor, UIColor.homeBgGradientBottom().cgColor]
+        layer.locations = [0.0, 0.35]
+        view.layer.addSublayer(layer)
+    }
+    
 }
