@@ -1,16 +1,16 @@
 //
-//  Common.swift
+//  CommonFunctions.swift
 //  Spotify-Clone
 //
-//  Created by Azhar Anwar on 4/3/20.
+//  Created by Azhar Anwar on 4/4/20.
 //  Copyright © 2020 Azhar Anwar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct Common {
-    static let kAccessTokenKey = "access-token-key"
+class CommonFunctions {
     
+    // MARK: - Generic parse function
     static func parseResults<T: Codable>(from data: Data) -> T? {
         do {
             let decoder = JSONDecoder()

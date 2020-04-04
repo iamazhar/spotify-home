@@ -22,7 +22,8 @@ class LogInViewController: UIViewController {
                                         scopes: [.streaming,
                                                  .userReadTop,
                                                  .playlistReadPrivate,
-                                                 .userLibraryRead])
+                                                 .userLibraryRead,
+                                                 .userReadEmail])
         self.view.addSubview(button)
         self.loginButton = button
         NotificationCenter.default.addObserver(self,
