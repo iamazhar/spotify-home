@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     var window: UIWindow?
-    lazy var rootViewController = ViewController()
+    lazy var rootViewController = HomeViewController()
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         SpotifyAuthService.shared.sptLoginConfigure()
         
-        window.rootViewController = UINavigationController(rootViewController: rootViewController)
+//        window.rootViewController = UINavigationController(rootViewController: rootViewController)
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         self.window = window
     }

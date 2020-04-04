@@ -18,6 +18,34 @@
 		FFB8162B24387ADA00064E21 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162A24387ADA00064E21 /* Track.swift */; };
 		FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162C24387B0200064E21 /* CommonFunctions.swift */; };
 		FFB8162F24387CA200064E21 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162E24387CA200064E21 /* Result.swift */; };
+		FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */; };
+		FFB816332438970600064E21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816322438970600064E21 /* HomeViewController.swift */; };
+		FFB816362438979B00064E21 /* TopItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816352438979B00064E21 /* TopItemCollectionView.swift */; };
+		FFB8163A243899D600064E21 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81638243899D600064E21 /* BrandColors.swift */; };
+		FFB8163B243899D600064E21 /* BrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81639243899D600064E21 /* BrandTypography.swift */; };
+		FFB8163D2438A19400064E21 /* TopItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163C2438A19400064E21 /* TopItemCollectionViewCell.swift */; };
+		FFB8163F2438A9CD00064E21 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8163E2438A9CD00064E21 /* Kingfisher.framework */; };
+		FFB816402438A9CD00064E21 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8163E2438A9CD00064E21 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFB816422438A9E700064E21 /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFB816412438A9E700064E21 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFB816572438CCC500064E21 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816442438CCC500064E21 /* Montserrat-LightItalic.ttf */; };
+		FFB816582438CCC500064E21 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816452438CCC500064E21 /* Montserrat-Medium.ttf */; };
+		FFB816592438CCC500064E21 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816462438CCC500064E21 /* Montserrat-BoldItalic.ttf */; };
+		FFB8165A2438CCC500064E21 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816472438CCC500064E21 /* Montserrat-Light.ttf */; };
+		FFB8165B2438CCC500064E21 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816482438CCC500064E21 /* Montserrat-ThinItalic.ttf */; };
+		FFB8165C2438CCC500064E21 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816492438CCC500064E21 /* Montserrat-ExtraLight.ttf */; };
+		FFB8165D2438CCC500064E21 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164A2438CCC500064E21 /* Montserrat-Thin.ttf */; };
+		FFB8165E2438CCC500064E21 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164B2438CCC500064E21 /* Montserrat-Bold.ttf */; };
+		FFB8165F2438CCC500064E21 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164C2438CCC500064E21 /* Montserrat-MediumItalic.ttf */; };
+		FFB816602438CCC500064E21 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164D2438CCC500064E21 /* Montserrat-BlackItalic.ttf */; };
+		FFB816612438CCC500064E21 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */; };
+		FFB816622438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */; };
+		FFB816632438CCC500064E21 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */; };
+		FFB816642438CCC500064E21 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFB816512438CCC500064E21 /* OFL.txt */; };
+		FFB816652438CCC500064E21 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816522438CCC500064E21 /* Montserrat-Black.ttf */; };
+		FFB816662438CCC500064E21 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */; };
+		FFB816672438CCC500064E21 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */; };
+		FFB816682438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816552438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf */; };
+		FFB816692438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816562438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf */; };
 		FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; };
 		FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -56,6 +84,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */,
+				FFB816402438A9CD00064E21 /* Kingfisher.framework in Embed Frameworks */,
 				FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -68,6 +97,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */,
+				FFB816422438A9E700064E21 /* Kingfisher.framework in CopyFiles */,
 				FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +115,33 @@
 		FFB8162A24387ADA00064E21 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		FFB8162C24387B0200064E21 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		FFB8162E24387CA200064E21 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPIService.swift; sourceTree = "<group>"; };
+		FFB816322438970600064E21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FFB816352438979B00064E21 /* TopItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemCollectionView.swift; sourceTree = "<group>"; };
+		FFB81638243899D600064E21 /* BrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
+		FFB81639243899D600064E21 /* BrandTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTypography.swift; sourceTree = "<group>"; };
+		FFB8163C2438A19400064E21 /* TopItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFB8163E2438A9CD00064E21 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		FFB816412438A9E700064E21 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		FFB816442438CCC500064E21 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		FFB816452438CCC500064E21 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		FFB816462438CCC500064E21 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FFB816472438CCC500064E21 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		FFB816482438CCC500064E21 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FFB816492438CCC500064E21 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FFB8164A2438CCC500064E21 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		FFB8164B2438CCC500064E21 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		FFB8164C2438CCC500064E21 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FFB8164D2438CCC500064E21 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FFB816512438CCC500064E21 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		FFB816522438CCC500064E21 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		FFB816552438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FFB816562438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		FFD662B22437222D00C0C3D6 /* Spotify-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +168,7 @@
 			files = (
 				FFD662E62437249000C0C3D6 /* SpotifyiOS.framework in Frameworks */,
 				FF106FEB2437937200723D3F /* Alamofire.framework in Frameworks */,
+				FFB8163F2438A9CD00064E21 /* Kingfisher.framework in Frameworks */,
 				FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +193,7 @@
 		FF106FEF2437955700723D3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFB816322438970600064E21 /* HomeViewController.swift */,
 				FFD662B92437222D00C0C3D6 /* ViewController.swift */,
 				FF106FE82437879A00723D3F /* LogInViewController.swift */,
 			);
@@ -145,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				FF106FF12437958D00723D3F /* SpotifyAuthService.swift */,
+				FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,9 +229,55 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FFB816342438976600064E21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFB816352438979B00064E21 /* TopItemCollectionView.swift */,
+				FFB8163C2438A19400064E21 /* TopItemCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFB81637243899B100064E21 /* Design System */ = {
+			isa = PBXGroup;
+			children = (
+				FFB81638243899D600064E21 /* BrandColors.swift */,
+				FFB81639243899D600064E21 /* BrandTypography.swift */,
+				FFB816432438CCC500064E21 /* Montserrat */,
+			);
+			path = "Design System";
+			sourceTree = "<group>";
+		};
+		FFB816432438CCC500064E21 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				FFB816442438CCC500064E21 /* Montserrat-LightItalic.ttf */,
+				FFB816452438CCC500064E21 /* Montserrat-Medium.ttf */,
+				FFB816462438CCC500064E21 /* Montserrat-BoldItalic.ttf */,
+				FFB816472438CCC500064E21 /* Montserrat-Light.ttf */,
+				FFB816482438CCC500064E21 /* Montserrat-ThinItalic.ttf */,
+				FFB816492438CCC500064E21 /* Montserrat-ExtraLight.ttf */,
+				FFB8164A2438CCC500064E21 /* Montserrat-Thin.ttf */,
+				FFB8164B2438CCC500064E21 /* Montserrat-Bold.ttf */,
+				FFB8164C2438CCC500064E21 /* Montserrat-MediumItalic.ttf */,
+				FFB8164D2438CCC500064E21 /* Montserrat-BlackItalic.ttf */,
+				FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */,
+				FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */,
+				FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */,
+				FFB816512438CCC500064E21 /* OFL.txt */,
+				FFB816522438CCC500064E21 /* Montserrat-Black.ttf */,
+				FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */,
+				FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */,
+				FFB816552438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf */,
+				FFB816562438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
 		FFBD70C32437835300E6AD9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFB8163E2438A9CD00064E21 /* Kingfisher.framework */,
 				FF106FEA2437937200723D3F /* Alamofire.framework */,
 				FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */,
 			);
@@ -181,6 +287,7 @@
 		FFD662A92437222D00C0C3D6 = {
 			isa = PBXGroup;
 			children = (
+				FFB816412438A9E700064E21 /* Kingfisher.framework */,
 				FF106FED243793A800723D3F /* Alamofire.framework */,
 				FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */,
 				FFD662E72437262500C0C3D6 /* Spotify-Clone-Bridging-Header.h */,
@@ -206,6 +313,8 @@
 		FFD662B42437222D00C0C3D6 /* Spotify-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				FFB81637243899B100064E21 /* Design System */,
+				FFB816342438976600064E21 /* Views */,
 				FFA929122437B0290006F5CA /* Model */,
 				FFA9290F2437A2830006F5CA /* Common */,
 				FF106FF02437957000723D3F /* Services */,
@@ -344,8 +453,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB816662438CCC500064E21 /* Montserrat-Regular.ttf in Resources */,
+				FFB8165F2438CCC500064E21 /* Montserrat-MediumItalic.ttf in Resources */,
+				FFB816652438CCC500064E21 /* Montserrat-Black.ttf in Resources */,
+				FFB8165E2438CCC500064E21 /* Montserrat-Bold.ttf in Resources */,
+				FFB816612438CCC500064E21 /* Montserrat-SemiBold.ttf in Resources */,
+				FFB8165A2438CCC500064E21 /* Montserrat-Light.ttf in Resources */,
+				FFB816672438CCC500064E21 /* Montserrat-Italic.ttf in Resources */,
+				FFB8165D2438CCC500064E21 /* Montserrat-Thin.ttf in Resources */,
+				FFB8165B2438CCC500064E21 /* Montserrat-ThinItalic.ttf in Resources */,
+				FFB816642438CCC500064E21 /* OFL.txt in Resources */,
 				FFD662C22437223100C0C3D6 /* LaunchScreen.storyboard in Resources */,
 				FFD662BF2437223100C0C3D6 /* Assets.xcassets in Resources */,
+				FFB816582438CCC500064E21 /* Montserrat-Medium.ttf in Resources */,
+				FFB8165C2438CCC500064E21 /* Montserrat-ExtraLight.ttf in Resources */,
+				FFB816632438CCC500064E21 /* Montserrat-ExtraBold.ttf in Resources */,
+				FFB816602438CCC500064E21 /* Montserrat-BlackItalic.ttf in Resources */,
+				FFB816592438CCC500064E21 /* Montserrat-BoldItalic.ttf in Resources */,
+				FFB816572438CCC500064E21 /* Montserrat-LightItalic.ttf in Resources */,
+				FFB816692438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				FFB816682438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				FFB816622438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +504,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SpotifyLogin.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -392,16 +521,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */,
 				FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */,
 				FFB8162B24387ADA00064E21 /* Track.swift in Sources */,
+				FFB816362438979B00064E21 /* TopItemCollectionView.swift in Sources */,
 				FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */,
 				FFD662BA2437222D00C0C3D6 /* ViewController.swift in Sources */,
 				FFB8162924387A9800064E21 /* Artist.swift in Sources */,
 				FFD662B62437222D00C0C3D6 /* AppDelegate.swift in Sources */,
 				FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */,
+				FFB8163A243899D600064E21 /* BrandColors.swift in Sources */,
 				FFA929112437A29D0006F5CA /* Common.swift in Sources */,
 				FFA929142437B0340006F5CA /* Album.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,
+				FFB816332438970600064E21 /* HomeViewController.swift in Sources */,
+				FFB8163B243899D600064E21 /* BrandTypography.swift in Sources */,
+				FFB8163D2438A19400064E21 /* TopItemCollectionViewCell.swift in Sources */,
 				FFB8162F24387CA200064E21 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
