@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import SpotifyLogin
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     var window: UIWindow?
-    lazy var rootViewController = ViewController()
+    lazy var rootViewController = HomeViewController()
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        window.rootViewController = rootViewController
+        SpotifyAuthService.shared.sptLoginConfigure()
+        
+        window.rootViewController = UINavigationController(rootViewController: rootViewController)
         window.makeKeyAndVisible()
         self.window = window
     }
@@ -32,15 +35,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        if let _ = rootViewController.appRemote.connectionParameters.accessToken {
-            rootViewController.appRemote.connect()
-        }
+        //
     }
     
     func sceneWillResignActive(_ scene: UIScene) {
-        if (rootViewController.appRemote.isConnected) {
-            rootViewController.appRemote.disconnect()
-        }
+        //
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -59,15 +58,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let url = URLContexts.first?.url else {
             return
         }
-
-        let parameters = rootViewController.appRemote.authorizationParameters(from: url);
-
-        if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-            rootViewController.appRemote.connectionParameters.accessToken = access_token
-            rootViewController.accessToken = access_token
-        } else if let _ = parameters?[SPTAppRemoteErrorDescriptionKey] {
-            // Show the error
-        }
+        
+        let handled = SpotifyLogin.shared.applicationOpenURL(url) { _ in }
+        print(handled);
     }
     
 }
