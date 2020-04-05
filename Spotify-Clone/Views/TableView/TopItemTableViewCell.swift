@@ -8,7 +8,17 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class TopItemTableViewCell: UITableViewCell {
+    
+    public var cellType: CellType = .regular {
+        didSet {
+            topItemCollectionView.cellType = cellType
+            NSLayoutConstraint.activate([
+                topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height)
+            ])
+            topItemCollectionView.updateConstraints()
+        }
+    }
     
     private var containerStackView: UIStackView = {
         let sv = UIStackView()
@@ -40,13 +50,12 @@ class HomeTableViewCell: UITableViewCell {
     
     fileprivate func setupLayout() {
         self.contentView.backgroundColor = .clear
-        
-        containerStackView.addArrangedSubview(UIView())
+    
         containerStackView.addArrangedSubview(sectionLabel)
         containerStackView.addArrangedSubview(topItemCollectionView)
         
         NSLayoutConstraint.activate([
-            topItemCollectionView.heightAnchor.constraint(equalToConstant: 170),
+            topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height),
             topItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             topItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])

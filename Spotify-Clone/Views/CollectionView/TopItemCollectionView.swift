@@ -8,15 +8,26 @@
 
 import UIKit
 
-private let reuseIdentifier = "itemCell"
+public enum CellType: String {
+    case small, regular
+    
+    var value: CGSize {
+        switch self {
+        case .small:
+            return CGSize(width: 113, height: 150)
+        case .regular:
+            return CGSize(width: 160, height: 200)
+        }
+    }
+}
+
+private let reuseIdentifier = "item-cell"
 
 class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    public var tracks: [Track] = [] {
-        didSet {
-            print("TOP ITEM VIEW: ", tracks[0])
-        }
-    }
+    public var tracks: [Track] = []
+    
+    public var cellType: CellType = .regular
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -34,7 +45,7 @@ class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout
@@ -55,14 +66,13 @@ class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
         let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TopItemCollectionViewCell
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
+        cell.cellType = cellType
         cell.itemTitle = tracks[indexPath.item].name
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 160, height: 200)
-        return CGSize(width: 113, height: 150)
+        return cellType.value
     }
-    
     
 }

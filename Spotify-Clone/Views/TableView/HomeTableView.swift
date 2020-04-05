@@ -8,9 +8,27 @@
 
 import UIKit
 
+private let topItemReuseIdentifier = "top-cell"
+private let gridItemReuseIdentifier = "grid-cell"
+
+public enum HomeTableViewCellHeight: CGFloat {
+    case grid, itemSmall, itemRegular
+    
+    var value: CGFloat {
+        switch self {
+        case .grid:
+            return 230.0
+        case .itemSmall:
+            return 220.0
+        case .itemRegular:
+            return 270.0
+        }
+    }
+}
+
 class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
-    var tracks: [Track] = [] {
+    public var tracks: [Track] = [] {
         didSet {
             print("HOME TABLE VIEW: ", tracks[0])
         }
@@ -19,14 +37,14 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .plain)
         
-        separatorStyle = .none
+//        separatorStyle = .none
         contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         
         delegate = self
         dataSource = self
         
-        register(HomeTableViewCell.self, forCellReuseIdentifier: "cellid")
-        register(GridTableViewCell.self, forCellReuseIdentifier: "grid-cell")
+        register(TopItemTableViewCell.self, forCellReuseIdentifier: topItemReuseIdentifier)
+        register(GridTableViewCell.self, forCellReuseIdentifier: gridItemReuseIdentifier)
         
     }
     
@@ -42,14 +60,26 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-//            let cell = GridTableViewCell.init(style: .default, reuseIdentifier: "grid-cell")
-            let cell = dequeueReusableCell(withIdentifier: "grid-cell", for: indexPath) as! GridTableViewCell
+        switch indexPath.row {
+        case 0:
+            let cell = dequeueReusableCell(withIdentifier: gridItemReuseIdentifier, for: indexPath) as! GridTableViewCell
             cell.sectionLabel.text = "Good Evening"
             cell.gridItemCollectionView.tracks = Array<Track>(tracks.prefix(6))
             return cell
-        } else {
-            let cell = HomeTableViewCell.init(style: .default, reuseIdentifier: "cellid")
+        case 1:
+            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
+            cell.cellType = .small
+            cell.backgroundColor = .red
+            cell.sectionLabel.text = "Top Artists"
+            cell.topItemCollectionView.tracks = tracks
+            return cell
+        case 2:
+            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
+            cell.sectionLabel.text = "Top Artists"
+            cell.topItemCollectionView.tracks = tracks
+            return cell
+        default:
+            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
             cell.sectionLabel.text = "Top Artists"
             cell.topItemCollectionView.tracks = tracks
             return cell
@@ -58,10 +88,15 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 220.0
+        switch indexPath.row {
+        case 0:
+            return HomeTableViewCellHeight.grid.value
+        case 1:
+            return HomeTableViewCellHeight.itemSmall.value
+        default:
+            return HomeTableViewCellHeight.itemRegular.value
         }
-        return 250.0
+
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
