@@ -11,6 +11,9 @@ import Kingfisher
 
 class GridItemCollectionViewCell: UICollectionViewCell {
     
+    let touchDownAnimDuration:Double = 0.25
+    var didScaleDownOnTouch = false
+    
     // MARK: - Data
     public var imagePath: String? {
         didSet {
@@ -105,4 +108,43 @@ class GridItemCollectionViewCell: UICollectionViewCell {
     }
     
     
+}
+
+extension GridItemCollectionViewCell {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.didScaleDownOnTouch = false
+        self.setTouchDownState()
+        super.touchesBegan(touches, with: event)
+    }
+    
+    open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+    }
+    
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.setTouchUpStateWithAnimation()
+        super.touchesCancelled(touches, with: event)
+    }
+    
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        self.setTouchUpStateWithAnimation()
+    }
+    
+    func setTouchDownState() {
+        let touchDownScale: CGFloat = 0.965
+        UIView.animate(withDuration: touchDownAnimDuration, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.4, options: .curveLinear, animations: {
+            self.transform = self.transform.scaledBy(x: touchDownScale, y: touchDownScale)
+        }) { (_) in
+            self.didScaleDownOnTouch = true
+        }
+    }
+    
+    func setTouchUpStateWithAnimation() {
+        UIView.animate(withDuration: touchDownAnimDuration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.4, options: .curveEaseInOut, animations: {
+            self.transform = .identity
+        }) { (_) in
+            self.didScaleDownOnTouch = true
+        }
+    }
 }
