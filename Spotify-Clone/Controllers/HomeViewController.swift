@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
         let layer = CAGradientLayer()
         layer.frame = view.frame
         layer.colors = [UIColor.homeBgGradientTop().cgColor, UIColor.homeBgGradientBottom().cgColor]
-        layer.locations = [0.0, 0.35]
+        layer.locations = [0.0, 0.2]
         view.layer.addSublayer(layer)
     }
     

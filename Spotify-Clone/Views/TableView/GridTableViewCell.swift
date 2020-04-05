@@ -44,6 +44,7 @@ class GridTableViewCell: UITableViewCell {
         
         containerStackView.addArrangedSubview(sectionLabel)
         containerStackView.addArrangedSubview(gridItemCollectionView)
+        
         NSLayoutConstraint.activate([
             gridItemCollectionView.heightAnchor.constraint(equalToConstant: 184),
             gridItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),

@@ -59,7 +59,7 @@ extension SpotifyWebAPIService {
             }
             
             //
-            let url = URL(string: "\(self.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=50&offset=5")
+            let url = URL(string: "\(self.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=10&offset=5")
             
             var request = URLRequest(url: url!)
             request.setValue("application/json", forHTTPHeaderField: "Accept")

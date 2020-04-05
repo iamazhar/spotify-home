@@ -10,6 +10,15 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
+    private var containerStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.alignment = .leading
+        sv.axis = .vertical
+        sv.spacing = 15.0
+        return sv
+    }()
+    
     var sectionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: homeSectionTitle.fontName, size: homeSectionTitle.fontSize)
@@ -22,12 +31,6 @@ class HomeTableViewCell: UITableViewCell {
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
-    
-    let sectionView: SectionView = {
-        let sv = SectionView()
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
-    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,23 +41,23 @@ class HomeTableViewCell: UITableViewCell {
     fileprivate func setupLayout() {
         self.contentView.backgroundColor = .clear
         
-        addSubview(sectionView)
+        containerStackView.addArrangedSubview(UIView())
+        containerStackView.addArrangedSubview(sectionLabel)
+        containerStackView.addArrangedSubview(topItemCollectionView)
+        
         NSLayoutConstraint.activate([
-            sectionView.topAnchor.constraint(equalTo: topAnchor),
-            sectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            sectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            sectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            topItemCollectionView.heightAnchor.constraint(equalToConstant: 170),
+            topItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
+            topItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
         
-//        addSubview(topItemCollectionView)
-//
-//        NSLayoutConstraint.activate([
-//            topItemCollectionView.topAnchor.constraint(equalTo: topAnchor),
-//            topItemCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            topItemCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            topItemCollectionView.heightAnchor.constraint(equalToConstant: 140.0)
-////            topItemCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
-//        ])
+        addSubview(containerStackView)
+        NSLayoutConstraint.activate([
+            containerStackView.topAnchor.constraint(equalTo: topAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
+            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
     
     required init?(coder: NSCoder) {

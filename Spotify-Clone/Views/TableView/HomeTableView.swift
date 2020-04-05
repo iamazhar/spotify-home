@@ -50,8 +50,8 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = HomeTableViewCell.init(style: .default, reuseIdentifier: "cellid")
-            cell.sectionView.sectionLabel.text = "Top Artists"
-            cell.sectionView.topItemCollectionView.tracks = tracks
+            cell.sectionLabel.text = "Top Artists"
+            cell.topItemCollectionView.tracks = tracks
             return cell
         }
         
@@ -68,4 +68,8 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.selectionStyle = .none
+    }
 }

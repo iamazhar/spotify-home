@@ -34,7 +34,7 @@ class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout

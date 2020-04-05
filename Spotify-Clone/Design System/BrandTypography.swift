@@ -10,5 +10,5 @@ struct BrandStyle {
 	}
 }
 
-let recentlyPlayedTitle = BrandStyle(name: "Montserrat-Medium", size: 11, color: UIColor.white)
+let recentlyPlayedTitle = BrandStyle(name: "Montserrat-SemiBold", size: 11, color: UIColor.white)
 let homeSectionTitle = BrandStyle(name: "Montserrat-Bold", size: 20, color: UIColor.white)

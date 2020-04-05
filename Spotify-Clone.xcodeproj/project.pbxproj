@@ -357,10 +357,10 @@
 			children = (
 				FFB81637243899B100064E21 /* Design System */,
 				FFB816342438976600064E21 /* Views */,
+				FF106FEF2437955700723D3F /* Controllers */,
 				FFA929122437B0290006F5CA /* Model */,
 				FFA9290F2437A2830006F5CA /* Common */,
 				FF106FF02437957000723D3F /* Services */,
-				FF106FEF2437955700723D3F /* Controllers */,
 				FFD662BE2437223100C0C3D6 /* Assets.xcassets */,
 				FFD662B52437222D00C0C3D6 /* AppDelegate.swift */,
 				FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */,

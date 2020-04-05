@@ -12,11 +12,7 @@ private let reuseIdentifier = "grid-cell"
 
 class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    public var tracks: [Track] = [] {
-        didSet {
-            print("GRID CV: ", tracks.first)
-        }
-    }
+    public var tracks: [Track] = []
 
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
