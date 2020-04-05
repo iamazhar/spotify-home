@@ -35,7 +35,7 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         super.init(frame: frame, style: .plain)
         
         separatorStyle = .none
-        contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
         
         delegate = self
         dataSource = self

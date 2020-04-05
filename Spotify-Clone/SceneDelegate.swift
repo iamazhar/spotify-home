@@ -22,8 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         SpotifyAuthService.shared.sptLoginConfigure()
         
-//        window.rootViewController = UINavigationController(rootViewController: rootViewController)
-        window.rootViewController = rootViewController
+        window.rootViewController = UINavigationController(rootViewController: rootViewController)
         window.makeKeyAndVisible()
         self.window = window
     }
