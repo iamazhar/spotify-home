@@ -11,27 +11,34 @@ import SpotifyLogin
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Views
+    
+    /// Sign out button which is available in the navigation bar
     private lazy var signOutButton: UIButton = {
         let b = UIButton()
         b.translatesAutoresizingMaskIntoConstraints = false
-//        b.setTitle("Sign Out", for: .normal)
         b.setImage(UIImage(systemName: "gear")?.tinted(with: .white), for: .normal)
         b.addTarget(self, action: #selector(handleSignOut), for: .touchUpInside)
         b.setTitleColor(UIColor.label, for: .normal)
         return b
     }()
     
+    /// Handler to perform sign out.
     @objc fileprivate func handleSignOut() {
         SpotifyLogin.shared.logout()
         print("Did Sign out")
         showLoginFlow()
     }
     
+    /// Primary table view to display Home content
     private lazy var tableView: HomeTableView = {
         let tv = HomeTableView(frame: .zero, style: .plain)
+        tv.backgroundColor = .clear
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()
+    
+    // MARK: - Methods
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,10 +48,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup nav bar and gradient background
         setupNavBar()
-        
         setupBackgroundGradient()
         
+        // add and constrain tableView
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -53,13 +61,10 @@ class HomeViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        tableView.backgroundColor = UIColor.clear
-        
-        
+        // API call
         SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, _, error) in
             if let error = error {
                 print("Error: ", error)
-                self.checkAccessToken()
             }
             
             if let userTracks = tracks {
@@ -71,10 +76,10 @@ class HomeViewController: UIViewController {
             }
         }
         
+        // API call
         SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { (_, artists, error) in
             if let error = error {
                 print("Error: ", error)
-                self.checkAccessToken()
             }
             if let userArtists = artists {
                 self.tableView.artists = userArtists
@@ -86,6 +91,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    /// Sets up the background gradient with design tokens from the Spotify Design System
     fileprivate func setupBackgroundGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.frame
@@ -94,11 +100,13 @@ class HomeViewController: UIViewController {
         view.layer.addSublayer(layer)
     }
     
+    /// Presents the Log In VC based on external logic
     func showLoginFlow() {
         let logInVC = LogInViewController()
         navigationController?.pushViewController(logInVC, animated: true)
     }
     
+    /// Check if the access token exists. Based on the returned boolean value the log in controller is pushed onto the navigation stack.
     fileprivate func checkAccessToken() {
         SpotifyAuthService.shared.sptCheckAccessToken { [weak self] (exists, error) in
             if let error = error {
@@ -108,14 +116,19 @@ class HomeViewController: UIViewController {
         }
     }
     
+    /// Set up the navigation bar with a clear background and shadows. Add the sign out button as a navigation bar sub view
     fileprivate func setupNavBar() {
+        // make nav bar visible if hidden
         if navigationController?.navigationBar.isHidden == true {
             navigationController?.navigationBar.isHidden = false
         }
+        
+        //style the nav bar
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         
+        // add and constraint signOutButton
         guard let navController = navigationController else { return }
         navController.navigationBar.addSubview(signOutButton)
         NSLayoutConstraint.activate([
