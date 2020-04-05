@@ -235,8 +235,8 @@
 		FF5CD9282439050B00AD0701 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				FFB8166C2438D68A00064E21 /* HomeTableViewCell.swift */,
 				FFB816702438FAFE00064E21 /* HomeTableView.swift */,
+				FFB8166C2438D68A00064E21 /* HomeTableViewCell.swift */,
 				FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */,
 			);
 			path = TableView;

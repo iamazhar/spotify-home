@@ -43,9 +43,10 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = GridTableViewCell.init(style: .default, reuseIdentifier: "grid-cell")
+//            let cell = GridTableViewCell.init(style: .default, reuseIdentifier: "grid-cell")
+            let cell = dequeueReusableCell(withIdentifier: "grid-cell", for: indexPath) as! GridTableViewCell
             cell.sectionLabel.text = "Good Evening"
-            cell.gridItemCollectionView.tracks = Array<Track>(tracks.shuffled().prefix(6))
+            cell.gridItemCollectionView.tracks = Array<Track>(tracks.prefix(6))
             return cell
         } else {
             let cell = HomeTableViewCell.init(style: .default, reuseIdentifier: "cellid")

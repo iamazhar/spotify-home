@@ -53,8 +53,8 @@ class GridTableViewCell: UITableViewCell {
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     
