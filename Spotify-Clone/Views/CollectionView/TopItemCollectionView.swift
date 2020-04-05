@@ -12,7 +12,11 @@ private let reuseIdentifier = "itemCell"
 
 class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    public var tracks: [Track] = []
+    public var tracks: [Track] = [] {
+        didSet {
+            print("TOP ITEM VIEW: ", tracks[0])
+        }
+    }
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -56,6 +60,7 @@ class TopItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 160, height: 200)
         return CGSize(width: 113, height: 150)
     }
     

@@ -29,7 +29,7 @@ class TopItemCollectionViewCell: UICollectionViewCell {
     }
     
     public let artworkImageView: UIImageView = {
-        let iv = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 113.0, height: 113.0)))
+        let iv = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 160, height: 160)))
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true

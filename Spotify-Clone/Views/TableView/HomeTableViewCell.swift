@@ -10,18 +10,18 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
-//    var sectionLabel: UILabel = {
-//        let label = UILabel()
-//        label.font = UIFont(name: homeSectionTitle.fontName, size: homeSectionTitle.fontSize)
-//        label.text = "Top Tracks"
-//        return label
-//    }()
-//
-//    var topItemCollectionView: TopItemCollectionView = {
-//        let cv = TopItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-//        cv.translatesAutoresizingMaskIntoConstraints = false
-//        return cv
-//    }()
+    var sectionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: homeSectionTitle.fontName, size: homeSectionTitle.fontSize)
+        label.text = "Top Tracks"
+        return label
+    }()
+
+    var topItemCollectionView: TopItemCollectionView = {
+        let cv = TopItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        return cv
+    }()
     
     let sectionView: SectionView = {
         let sv = SectionView()

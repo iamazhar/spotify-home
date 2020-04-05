@@ -10,7 +10,11 @@ import UIKit
 
 class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
-    var tracks: [Track] = []
+    var tracks: [Track] = [] {
+        didSet {
+            print("HOME TABLE VIEW: ", tracks[0])
+        }
+    }
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .plain)
@@ -21,19 +25,9 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         delegate = self
         dataSource = self
         
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-            guard let userTracks = tracks else { return }
-            self.tracks = userTracks
-            
-            DispatchQueue.main.async {
-                self.reloadData()
-            }
-        }
+        register(HomeTableViewCell.self, forCellReuseIdentifier: "cellid")
+        register(GridTableViewCell.self, forCellReuseIdentifier: "grid-cell")
         
-        register(HomeTableViewCell.self, forCellReuseIdentifier: "cellId")
     }
     
     
@@ -43,20 +37,30 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = HomeTableViewCell.init(style: .default, reuseIdentifier: "cellid")
-        cell.sectionView.topItemCollectionView.tracks = tracks
-        return cell
+        
+        if indexPath.row == 0 {
+            let cell = GridTableViewCell.init(style: .default, reuseIdentifier: "grid-cell")
+            cell.sectionLabel.text = "Good Evening"
+            cell.gridItemCollectionView.tracks = Array<Track>(tracks.shuffled().prefix(6))
+            return cell
+        } else {
+            let cell = HomeTableViewCell.init(style: .default, reuseIdentifier: "cellid")
+            cell.sectionView.sectionLabel.text = "Top Artists"
+            cell.sectionView.topItemCollectionView.tracks = tracks
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 400.0
+            return 220.0
         }
-        return 230.0
+        return 250.0
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -38,14 +38,12 @@ class HomeViewController: UIViewController {
             }
             guard let userTracks = tracks else { return }
             
-            print(userTracks)
+            self.tableView.tracks = userTracks
             
             DispatchQueue.main.async {
-                self.tableView.tracks = userTracks
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.tableView.reloadData()
             }
+            
         }
         
     }
