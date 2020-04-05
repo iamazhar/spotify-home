@@ -15,6 +15,7 @@
 		FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */; };
 		FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */; };
 		FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */; };
+		FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EB243A0DCA0075A640 /* ItemImage.swift */; };
 		FFA929112437A29D0006F5CA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA929102437A29D0006F5CA /* Common.swift */; };
 		FFA929142437B0340006F5CA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA929132437B0340006F5CA /* Album.swift */; };
 		FFB8162924387A9800064E21 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162824387A9800064E21 /* Artist.swift */; };
@@ -118,6 +119,7 @@
 		FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionView.swift; sourceTree = "<group>"; };
 		FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
+		FF99D0EB243A0DCA0075A640 /* ItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImage.swift; sourceTree = "<group>"; };
 		FFA929102437A29D0006F5CA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FFA929132437B0340006F5CA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		FFB8162824387A9800064E21 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				FFB8162824387A9800064E21 /* Artist.swift */,
 				FFB8162A24387ADA00064E21 /* Track.swift */,
 				FFB8162E24387CA200064E21 /* Result.swift */,
+				FF99D0EB243A0DCA0075A640 /* ItemImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */,
 				FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */,
 				FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */,
+				FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */,
 				FFB8162B24387ADA00064E21 /* Track.swift in Sources */,
 				FFB816362438979B00064E21 /* ItemCollectionView.swift in Sources */,
 				FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */,

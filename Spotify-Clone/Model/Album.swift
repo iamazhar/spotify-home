@@ -9,27 +9,17 @@
 import Foundation
 
 struct Album: Codable {
-    
-    struct AlbumImages: Codable {
-        var height: Int
-        var width: Int
-        var url: String
-        
-        private enum CodingKeys: String, CodingKey {
-            case height, width, url
-        }
-        
-        init(height: Int, width: Int, url: String) {
-            self.height = height
-            self.width = width
-            self.url = url
-        }
-    }
-    
-    var images: [AlbumImages]
+    var id: String
+    var images: [ItemImage]
     
     private enum CodingKeys: String, CodingKey {
+        case id
         case images
+    }
+    
+    init(id: String, images: [ItemImage]) {
+        self.id = id
+        self.images = images
     }
     
 }

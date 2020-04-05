@@ -35,12 +35,18 @@ class SpotifyWebAPIService {
      Public method to fetch the user's top tracks using the Spotify Web API
      - Parameter completion: A closure that provides tracks and error objects
      */
-    public func sptUserTop(itemType: ItemType, completion: @escaping ([Track]?, Error?) -> ()) {
-        sptPrivateUserTop(itemType: itemType) { (tracks, error) in
+    public func sptUserTop(itemType: ItemType, completion: @escaping ([Track]?, [Artist]?, Error?) -> ()) {
+        sptPrivateUserTop(itemType: itemType) { (tracks, artists, error) in
             if let error = error {
-                completion(nil, error)
+                completion(nil, nil, error)
             }
-            completion(tracks, nil)
+            
+            if tracks != nil {
+                completion(tracks, nil, nil)
+            } else if artists != nil {
+                completion(nil, artists, nil)
+            }
+            
         }
     }
 }
@@ -49,42 +55,39 @@ class SpotifyWebAPIService {
 extension SpotifyWebAPIService {
     
     
-    private func sptPrivateUserTop(itemType: ItemType, completion: @escaping ([Track]?, Error?) ->()) {
-        SpotifyLogin.shared.getAccessToken { (token, error) in
-            
+    private func sptPrivateUserTop(itemType: ItemType, completion: @escaping ([Track]?, [Artist]?, Error?) ->()) {
+        SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
+            guard let self = self else { return }
             if let error = error {
                 print("Failed to get access token", error)
-                completion(nil, error)
+                completion(nil, nil, error)
                 return
             }
             
-            //
+            // delete this
+            print(token ?? "")
+            
             let url = URL(string: "\(self.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=10&offset=5")
             
-            var request = URLRequest(url: url!)
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
+            CommonFunctions.networkCall(url, token) { (data, error) in
                 if let error = error {
-                    print("Error: ", error.localizedDescription)
-                    completion(nil, error)
-                    return
-                }
-                
-                guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                    print("Response failed with code: ", response ?? "Failed")
+                    print("Network call failed: ", error)
                     return
                 }
                 
                 if let receivedData = data {
                     // TODO: - Parse based on itemType
-                    guard let itemsResult: Result<Track> = CommonFunctions.parseResults(from: receivedData) else { return }
-                    completion(itemsResult.items, nil)
+                    switch itemType {
+                    case .tracks:
+                        guard let itemsResult: Result<Track> = CommonFunctions.parseResults(from: receivedData) else { return }
+                        completion(itemsResult.items, nil, nil)
+                    case .artists:
+                        guard let itemsResult: Result<Artist> = CommonFunctions.parseResults(from: receivedData) else { return }
+                        completion(nil, itemsResult.items, nil)
+                    }
+                    
                 }
-            }.resume()
-            //
+            }
         }
     }
     

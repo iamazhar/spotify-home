@@ -8,7 +8,7 @@
 
 import UIKit
 
-private var cellHeightAdjust: CGFloat = 20.0
+private var cellHeightAdjust: CGFloat = 30.0
 
 class ItemTableViewCell: UITableViewCell {
     
@@ -53,11 +53,14 @@ class ItemTableViewCell: UITableViewCell {
     fileprivate func setupLayout() {
         self.contentView.backgroundColor = .clear
     
+        containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
         containerStackView.addArrangedSubview(sectionLabel)
-        containerStackView.addArrangedSubview(topItemCollectionView)
+//        NSLayoutConstraint.activate([
+//            sectionLabel.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor, constant: 15.0)
+//        ])
         
+        containerStackView.addArrangedSubview(topItemCollectionView)
         NSLayoutConstraint.activate([
-//            topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height),
             topItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             topItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
@@ -65,8 +68,8 @@ class ItemTableViewCell: UITableViewCell {
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }

@@ -11,8 +11,15 @@ import Foundation
 struct Artist: Codable {
     var id: String
     var name: String
+    var images: [ItemImage]?
     
     private enum CodingKeys: String, CodingKey {
-        case id, name
+        case id, name, images
+    }
+    
+    init(id: String, name: String, images: [ItemImage]) {
+        self.id = id
+        self.name = name
+        self.images = images
     }
 }

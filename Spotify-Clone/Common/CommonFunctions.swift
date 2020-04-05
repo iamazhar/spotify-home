@@ -21,4 +21,28 @@ class CommonFunctions {
         }
         return nil
     }
+    
+    static func networkCall(_ url: URL?, _ token: String?, completion: @escaping (Data?, Error?) -> Void) {
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Error: ", error.localizedDescription)
+                completion(nil, error)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Response failed with code: ", response ?? "Failed")
+                return
+            }
+            
+            completion(data, nil)
+            
+            
+        }.resume()
+    }
 }

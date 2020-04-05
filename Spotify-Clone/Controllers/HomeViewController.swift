@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         tableView.backgroundColor = UIColor.clear
         
         
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, error) in
+        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, _, error) in
             if let error = error {
                 print("Error: ", error)
                 return
@@ -44,6 +44,20 @@ class HomeViewController: UIViewController {
                 self.tableView.reloadData()
             }
             
+        }
+        
+        SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { (_, artists, error) in
+            if let error = error {
+                print("Error: ", error)
+                return
+            }
+            guard let userArtists = artists else { return }
+            
+            self.tableView.artists = userArtists
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         
     }

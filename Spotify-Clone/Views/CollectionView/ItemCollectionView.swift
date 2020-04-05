@@ -26,6 +26,7 @@ private let reuseIdentifier = "item-cell"
 class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var tracks: [Track] = []
+    public var artists: [Artist] = []
     
     public var cellType: CellType = .regular
     
@@ -45,7 +46,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout
@@ -59,11 +60,23 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if tracks.isEmpty {
+            return artists.count
+        }
         return tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
+        
+        if tracks.isEmpty {
+            let imagePath = artists[indexPath.item].images?[1].url
+            cell.imagePath = imagePath
+            cell.cellType = cellType
+            cell.itemTitle = artists[indexPath.item].name
+            return cell
+        }
+        
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
         cell.cellType = cellType

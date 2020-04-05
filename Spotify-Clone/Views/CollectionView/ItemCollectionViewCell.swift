@@ -77,9 +77,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
     private func setupLayout() {
         self.contentView.backgroundColor = .clear
         artworkStackView.addArrangedSubview(artworkImageView)
-//        NSLayoutConstraint.activate([
-//            artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
-//        ])
         
         artworkStackView.addArrangedSubview(itemLabel)
         
