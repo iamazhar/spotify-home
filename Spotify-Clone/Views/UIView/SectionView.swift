@@ -33,8 +33,8 @@ class SectionView: UIView {
         return label
     }()
     
-    var topItemCollectionView: TopItemCollectionView = {
-        let cv = TopItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var topItemCollectionView: ItemCollectionView = {
+        let cv = ItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()

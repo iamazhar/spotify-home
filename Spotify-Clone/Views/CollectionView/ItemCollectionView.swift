@@ -35,7 +35,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         dataSource = self
         delegate = self
         
-        register(TopItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         setupLayout()
         
@@ -63,7 +63,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TopItemCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
         cell.cellType = cellType

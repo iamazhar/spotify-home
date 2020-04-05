@@ -28,22 +28,18 @@ public enum HomeTableViewCellHeight: CGFloat {
 
 class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
-    public var tracks: [Track] = [] {
-        didSet {
-            print("HOME TABLE VIEW: ", tracks[0])
-        }
-    }
+    public var tracks: [Track] = [] 
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .plain)
         
-//        separatorStyle = .none
+        separatorStyle = .none
         contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         
         delegate = self
         dataSource = self
         
-        register(TopItemTableViewCell.self, forCellReuseIdentifier: topItemReuseIdentifier)
+        register(ItemTableViewCell.self, forCellReuseIdentifier: topItemReuseIdentifier)
         register(GridTableViewCell.self, forCellReuseIdentifier: gridItemReuseIdentifier)
         
     }
@@ -67,19 +63,19 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
             cell.gridItemCollectionView.tracks = Array<Track>(tracks.prefix(6))
             return cell
         case 1:
-            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
             cell.cellType = .small
             cell.backgroundColor = .red
             cell.sectionLabel.text = "Top Artists"
             cell.topItemCollectionView.tracks = tracks
             return cell
         case 2:
-            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
             cell.sectionLabel.text = "Top Artists"
             cell.topItemCollectionView.tracks = tracks
             return cell
         default:
-            let cell = TopItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
             cell.sectionLabel.text = "Top Artists"
             cell.topItemCollectionView.tracks = tracks
             return cell

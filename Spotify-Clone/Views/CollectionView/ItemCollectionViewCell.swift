@@ -9,9 +9,16 @@
 import UIKit
 import Kingfisher
 
-class TopItemCollectionViewCell: UICollectionViewCell {
+class ItemCollectionViewCell: UICollectionViewCell {
     
-    public var cellType: CellType = .regular
+    public var cellType: CellType = .regular {
+        didSet {
+            NSLayoutConstraint.activate([
+                artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
+            ])
+            artworkImageView.updateConstraints()
+        }
+    }
 
     public var imagePath: String? {
         didSet {
@@ -70,15 +77,11 @@ class TopItemCollectionViewCell: UICollectionViewCell {
     private func setupLayout() {
         self.contentView.backgroundColor = .clear
         artworkStackView.addArrangedSubview(artworkImageView)
-        NSLayoutConstraint.activate([
-            artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
-            artworkImageView.widthAnchor.constraint(equalToConstant: cellType.value.width)
-        ])
+//        NSLayoutConstraint.activate([
+//            artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
+//        ])
         
         artworkStackView.addArrangedSubview(itemLabel)
-        NSLayoutConstraint.activate([
-            itemLabel.heightAnchor.constraint(equalToConstant: 28)
-        ])
         
         
         addSubview(artworkStackView)

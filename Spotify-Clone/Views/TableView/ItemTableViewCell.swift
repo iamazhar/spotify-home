@@ -8,13 +8,15 @@
 
 import UIKit
 
-class TopItemTableViewCell: UITableViewCell {
+private var cellHeightAdjust: CGFloat = 20.0
+
+class ItemTableViewCell: UITableViewCell {
     
     public var cellType: CellType = .regular {
         didSet {
             topItemCollectionView.cellType = cellType
             NSLayoutConstraint.activate([
-                topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height)
+                topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height + cellHeightAdjust)
             ])
             topItemCollectionView.updateConstraints()
         }
@@ -36,8 +38,8 @@ class TopItemTableViewCell: UITableViewCell {
         return label
     }()
 
-    var topItemCollectionView: TopItemCollectionView = {
-        let cv = TopItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var topItemCollectionView: ItemCollectionView = {
+        let cv = ItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
@@ -55,7 +57,7 @@ class TopItemTableViewCell: UITableViewCell {
         containerStackView.addArrangedSubview(topItemCollectionView)
         
         NSLayoutConstraint.activate([
-            topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height),
+//            topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height),
             topItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             topItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
