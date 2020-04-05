@@ -33,9 +33,9 @@ class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumLineSpacing = 8
-        layout.minimumInteritemSpacing = 8
+        layout.minimumInteritemSpacing = 8.0
         collectionViewLayout = layout
         showsHorizontalScrollIndicator = false
         reloadData()
@@ -58,7 +58,7 @@ class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 48)
+        return CGSize(width: 190, height: 55)
     }
     
 }

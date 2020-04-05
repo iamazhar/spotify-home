@@ -45,7 +45,7 @@ class GridTableViewCell: UITableViewCell {
         containerStackView.addArrangedSubview(sectionLabel)
         containerStackView.addArrangedSubview(gridItemCollectionView)
         NSLayoutConstraint.activate([
-            gridItemCollectionView.heightAnchor.constraint(equalToConstant: 164),
+            gridItemCollectionView.heightAnchor.constraint(equalToConstant: 184),
             gridItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             gridItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
@@ -53,20 +53,11 @@ class GridTableViewCell: UITableViewCell {
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
-//        addSubview(gridItemCollectionView)
-//
-//        NSLayoutConstraint.activate([
-//            gridItemCollectionView.topAnchor.constraint(equalTo: topAnchor),
-//            gridItemCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0),
-//            gridItemCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0),
-//            gridItemCollectionView.heightAnchor.constraint(equalToConstant: 200.0)
-//            //            topItemCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
-//        ])
+    
     }
     
     required init?(coder: NSCoder) {

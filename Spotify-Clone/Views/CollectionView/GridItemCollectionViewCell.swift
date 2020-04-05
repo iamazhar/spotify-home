@@ -77,8 +77,8 @@ class GridItemCollectionViewCell: UICollectionViewCell {
     private func setupLayout() {
         containerStackView.addArrangedSubview(artworkImageView)
         NSLayoutConstraint.activate([
-            artworkImageView.heightAnchor.constraint(equalToConstant: 48.0),
-            artworkImageView.widthAnchor.constraint(equalToConstant: 48.0)
+            artworkImageView.heightAnchor.constraint(equalToConstant: 55.0),
+            artworkImageView.widthAnchor.constraint(equalToConstant: 55.0)
         ])
         
         containerStackView.addArrangedSubview(itemLabel)
