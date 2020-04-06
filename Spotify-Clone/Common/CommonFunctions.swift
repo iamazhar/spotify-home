@@ -11,6 +11,10 @@ import UIKit
 class CommonFunctions {
     
     // MARK: - Generic parse function
+    
+    /// Generic function that parses Data object into the specified type T using the JSONDecoder
+    /// - Parameter data: Data type object
+    /// - Returns: Object of Codable type T
     static func parseResults<T: Codable>(from data: Data) -> T? {
         do {
             let decoder = JSONDecoder()
@@ -22,6 +26,11 @@ class CommonFunctions {
         return nil
     }
     
+    /// Helper method that makes a URLSession network call.
+    /// - Parameters:
+    ///   - url: target URL
+    ///   - token: Access Token for the API endpoint
+    ///   - completion: Escaping closure with optional Data and Error type objects.
     static func networkCall(_ url: URL?, _ token: String?, completion: @escaping (Data?, Error?) -> Void) {
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")

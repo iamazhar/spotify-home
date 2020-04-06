@@ -9,16 +9,6 @@
 import Foundation
 
 struct Common {
+    /// Constant for the key string used to store access token as a Key-value pair.
     static let kAccessTokenKey = "access-token-key"
-    
-    static func parseResults<T: Codable>(from data: Data) -> T? {
-        do {
-            let decoder = JSONDecoder()
-            let result = try decoder.decode(T.self, from: data)
-            return result
-        } catch let err {
-            print("Failed to Decode: ", err)
-        }
-        return nil
-    }
 }
