@@ -61,7 +61,7 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: topItemReuseIdentifier)
-            cell.sectionLabel.text = "Your top artists"
+            cell.sectionLabel.text = "Your top tracks"
             cell.topItemCollectionView.tracks = tracks
             return cell
         }
