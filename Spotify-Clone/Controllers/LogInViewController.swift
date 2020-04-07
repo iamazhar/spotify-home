@@ -30,6 +30,7 @@ class LogInViewController: UIViewController {
                                                selector: #selector(loginSuccessful),
                                                name: .SpotifyLoginSuccessful,
                                                object: nil)
+        
     }
 
     override func viewWillLayoutSubviews() {
