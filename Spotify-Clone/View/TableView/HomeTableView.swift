@@ -11,21 +11,6 @@ import UIKit
 private let topItemReuseIdentifier = "top-cell"
 private let gridItemReuseIdentifier = "grid-cell"
 
-public enum HomeTableViewCellHeight: CGFloat {
-    case grid, itemSmall, itemRegular
-    
-    var value: CGFloat {
-        switch self {
-        case .grid:
-            return UIScreen.main.bounds.height / 4.0
-        case .itemSmall:
-            return UIScreen.main.bounds.height / 3.5
-        case .itemRegular:
-            return UIScreen.main.bounds.height / 3.0
-        }
-    }
-}
-
 class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     public var tracks: [Track] = []
@@ -35,7 +20,7 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         super.init(frame: frame, style: .plain)
         
         separatorStyle = .none
-        contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+        contentInset = SPTInsets.homeTableView.value
         
         delegate = self
         dataSource = self
@@ -86,11 +71,11 @@ class HomeTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return HomeTableViewCellHeight.grid.value
+            return SPTHomeSectionHeight.grid.value
         case 1:
-            return HomeTableViewCellHeight.itemSmall.value
+            return SPTHomeSectionHeight.itemSmall.value
         default:
-            return HomeTableViewCellHeight.itemRegular.value
+            return SPTHomeSectionHeight.itemRegular.value
         }
 
     }

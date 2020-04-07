@@ -12,7 +12,7 @@ private var cellHeightAdjust: CGFloat = 30.0
 
 class ItemTableViewCell: UITableViewCell {
     
-    public var cellType: CellType = .regular {
+    public var cellType: SPTCarouselCellSize = .regular {
         didSet {
             topItemCollectionView.cellType = cellType
             NSLayoutConstraint.activate([

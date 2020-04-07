@@ -9,7 +9,9 @@
 import UIKit
 import SpotifyLogin
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ItemsViewModelDelegate {
+    
+    var tracksViewModel = ItemsViewModel()
     
     // MARK: - Views
     
@@ -48,6 +50,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tracksViewModel.delegate = self
+        
         // setup nav bar and gradient background
         setupNavBar()
         setupBackgroundGradient()
@@ -61,34 +65,10 @@ class HomeViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        // API call
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, _, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-            
-            if let userTracks = tracks {
-                self.tableView.tracks = userTracks
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
         
-        // API call
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { (_, artists, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-            if let userArtists = artists {
-                self.tableView.artists = userArtists
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        tracksViewModel.getTracks()
+        tracksViewModel.getArtists()
+        
     }
     
     /// Sets up the background gradient with design tokens from the Spotify Design System
@@ -140,4 +120,22 @@ class HomeViewController: UIViewController {
     }
     
     
+}
+
+// MARK: - View model delegate methods
+extension HomeViewController {
+    func didReceiveTracksData(with tracks: [Track]) {
+        self.tableView.tracks = tracks
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    func didReceiveArtistsData(with artists: [Artist]) {
+        self.tableView.artists = artists
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

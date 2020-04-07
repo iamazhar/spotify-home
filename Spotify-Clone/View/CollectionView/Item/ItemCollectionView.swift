@@ -8,19 +8,6 @@
 
 import UIKit
 
-public enum CellType: String {
-    case small, regular
-    
-    var value: CGSize {
-        switch self {
-        case .small:
-            return CGSize(width: 113, height: 150)
-        case .regular:
-            return CGSize(width: 160, height: 200)
-        }
-    }
-}
-
 private let reuseIdentifier = "item-cell"
 
 class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -28,7 +15,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     public var tracks: [Track] = []
     public var artists: [Artist] = []
     
-    public var cellType: CellType = .regular
+    public var cellType: SPTCarouselCellSize = .regular
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -46,8 +33,8 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
-        layout.minimumLineSpacing = 10
+        layout.sectionInset = SPTInsets.item.value
+        layout.minimumLineSpacing = SPTMinimumCellSpacing.lineSpacing.value
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout
         showsHorizontalScrollIndicator = false

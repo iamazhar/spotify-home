@@ -12,6 +12,8 @@
 		FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF106FED243793A800723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FF12437958D00723D3F /* SpotifyAuthService.swift */; };
+		FF5A5D24243C8C4200836FD3 /* SPTPressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A5D23243C8C4200836FD3 /* SPTPressCell.swift */; };
+		FF5A5D26243C8CB200836FD3 /* SPTAnimationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */; };
 		FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */; };
 		FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */; };
 		FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */; };
@@ -26,8 +28,8 @@
 		FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */; };
 		FFB816332438970600064E21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816322438970600064E21 /* HomeViewController.swift */; };
 		FFB816362438979B00064E21 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816352438979B00064E21 /* ItemCollectionView.swift */; };
-		FFB8163A243899D600064E21 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81638243899D600064E21 /* BrandColors.swift */; };
-		FFB8163B243899D600064E21 /* BrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81639243899D600064E21 /* BrandTypography.swift */; };
+		FFB8163A243899D600064E21 /* SPTBrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81638243899D600064E21 /* SPTBrandColors.swift */; };
+		FFB8163B243899D600064E21 /* SPTBrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81639243899D600064E21 /* SPTBrandTypography.swift */; };
 		FFB8163D2438A19400064E21 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */; };
 		FFB8163F2438A9CD00064E21 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8163E2438A9CD00064E21 /* Kingfisher.framework */; };
 		FFB816402438A9CD00064E21 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8163E2438A9CD00064E21 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -45,7 +47,6 @@
 		FFB816612438CCC500064E21 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */; };
 		FFB816622438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */; };
 		FFB816632438CCC500064E21 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */; };
-		FFB816642438CCC500064E21 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFB816512438CCC500064E21 /* OFL.txt */; };
 		FFB816652438CCC500064E21 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816522438CCC500064E21 /* Montserrat-Black.ttf */; };
 		FFB816662438CCC500064E21 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */; };
 		FFB816672438CCC500064E21 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */; };
@@ -63,6 +64,8 @@
 		FFD662CD2437223100C0C3D6 /* Spotify_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD662CC2437223100C0C3D6 /* Spotify_CloneTests.swift */; };
 		FFD662D82437223100C0C3D6 /* Spotify_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD662D72437223100C0C3D6 /* Spotify_CloneUITests.swift */; };
 		FFD662E62437249000C0C3D6 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD662E52437249000C0C3D6 /* SpotifyiOS.framework */; };
+		FFDE4626243C768900A12D8B /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE4625243C768900A12D8B /* ItemsViewModel.swift */; };
+		FFDE462C243C835D00A12D8B /* SPTLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE462B243C835D00A12D8B /* SPTLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,8 @@
 		FF106FEA2437937200723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FF106FED243793A800723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FF106FF12437958D00723D3F /* SpotifyAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthService.swift; sourceTree = "<group>"; };
+		FF5A5D23243C8C4200836FD3 /* SPTPressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTPressCell.swift; sourceTree = "<group>"; };
+		FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTAnimationProperties.swift; sourceTree = "<group>"; };
 		FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionView.swift; sourceTree = "<group>"; };
 		FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,8 +134,8 @@
 		FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPIService.swift; sourceTree = "<group>"; };
 		FFB816322438970600064E21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFB816352438979B00064E21 /* ItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
-		FFB81638243899D600064E21 /* BrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
-		FFB81639243899D600064E21 /* BrandTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTypography.swift; sourceTree = "<group>"; };
+		FFB81638243899D600064E21 /* SPTBrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTBrandColors.swift; sourceTree = "<group>"; };
+		FFB81639243899D600064E21 /* SPTBrandTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTBrandTypography.swift; sourceTree = "<group>"; };
 		FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFB8163E2438A9CD00064E21 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		FFB816412438A9E700064E21 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -147,7 +152,6 @@
 		FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
-		FFB816512438CCC500064E21 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		FFB816522438CCC500064E21 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		FFD662D92437223100C0C3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD662E52437249000C0C3D6 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		FFD662E72437262500C0C3D6 /* Spotify-Clone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spotify-Clone-Bridging-Header.h"; sourceTree = "<group>"; };
+		FFDE4625243C768900A12D8B /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
+		FFDE462B243C835D00A12D8B /* SPTLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,31 +208,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF106FEF2437955700723D3F /* Controllers */ = {
+		FF106FEF2437955700723D3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FFB816322438970600064E21 /* HomeViewController.swift */,
 				FF106FE82437879A00723D3F /* LogInViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		FF106FF02437957000723D3F /* Services */ = {
+		FF106FF02437957000723D3F /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				FF106FF12437958D00723D3F /* SpotifyAuthService.swift */,
 				FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */,
 			);
-			path = Services;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FF5A5D22243C8C1D00836FD3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FF5A5D23243C8C4200836FD3 /* SPTPressCell.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		FF5CD927243904F600AD0701 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				FFB816352438979B00064E21 /* ItemCollectionView.swift */,
-				FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */,
-				FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */,
-				FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */,
+				FFDE4628243C830D00A12D8B /* Grid */,
+				FFDE4627243C830300A12D8B /* Item */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -235,18 +247,17 @@
 			isa = PBXGroup;
 			children = (
 				FFB816702438FAFE00064E21 /* HomeTableView.swift */,
-				FFB8166C2438D68A00064E21 /* ItemTableViewCell.swift */,
-				FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */,
+				FFDE4629243C831D00A12D8B /* Cell */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		FF99D0ED243A3BC50075A640 /* Extensions */ = {
+		FF99D0ED243A3BC50075A640 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FFA9290F2437A2830006F5CA /* Common */ = {
@@ -270,20 +281,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FFB816342438976600064E21 /* Views */ = {
+		FFB816342438976600064E21 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FF5CD9282439050B00AD0701 /* TableView */,
 				FF5CD927243904F600AD0701 /* CollectionView */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		FFB81637243899B100064E21 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
-				FFB81638243899D600064E21 /* BrandColors.swift */,
-				FFB81639243899D600064E21 /* BrandTypography.swift */,
+				FFB81638243899D600064E21 /* SPTBrandColors.swift */,
+				FFB81639243899D600064E21 /* SPTBrandTypography.swift */,
+				FFDE462B243C835D00A12D8B /* SPTLayout.swift */,
+				FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */,
 				FFB816432438CCC500064E21 /* Montserrat */,
 			);
 			path = "Design System";
@@ -305,7 +318,6 @@
 				FFB8164E2438CCC500064E21 /* Montserrat-SemiBold.ttf */,
 				FFB8164F2438CCC500064E21 /* Montserrat-ExtraLightItalic.ttf */,
 				FFB816502438CCC500064E21 /* Montserrat-ExtraBold.ttf */,
-				FFB816512438CCC500064E21 /* OFL.txt */,
 				FFB816522438CCC500064E21 /* Montserrat-Black.ttf */,
 				FFB816532438CCC500064E21 /* Montserrat-Regular.ttf */,
 				FFB816542438CCC500064E21 /* Montserrat-Italic.ttf */,
@@ -354,13 +366,15 @@
 		FFD662B42437222D00C0C3D6 /* Spotify-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				FF99D0ED243A3BC50075A640 /* Extensions */,
+				FF5A5D22243C8C1D00836FD3 /* Animation */,
+				FFDE4624243C764F00A12D8B /* View Model */,
+				FF99D0ED243A3BC50075A640 /* Extension */,
 				FFB81637243899B100064E21 /* Design System */,
-				FFB816342438976600064E21 /* Views */,
-				FF106FEF2437955700723D3F /* Controllers */,
+				FFB816342438976600064E21 /* View */,
+				FF106FEF2437955700723D3F /* Controller */,
 				FFA929122437B0290006F5CA /* Model */,
 				FFA9290F2437A2830006F5CA /* Common */,
-				FF106FF02437957000723D3F /* Services */,
+				FF106FF02437957000723D3F /* Service */,
 				FFD662BE2437223100C0C3D6 /* Assets.xcassets */,
 				FFD662B52437222D00C0C3D6 /* AppDelegate.swift */,
 				FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */,
@@ -386,6 +400,41 @@
 				FFD662D92437223100C0C3D6 /* Info.plist */,
 			);
 			path = "Spotify-CloneUITests";
+			sourceTree = "<group>";
+		};
+		FFDE4624243C764F00A12D8B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFDE4625243C768900A12D8B /* ItemsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FFDE4627243C830300A12D8B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				FFB816352438979B00064E21 /* ItemCollectionView.swift */,
+				FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		FFDE4628243C830D00A12D8B /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */,
+				FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		FFDE4629243C831D00A12D8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFB8166C2438D68A00064E21 /* ItemTableViewCell.swift */,
+				FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +553,6 @@
 				FFB816672438CCC500064E21 /* Montserrat-Italic.ttf in Resources */,
 				FFB8165D2438CCC500064E21 /* Montserrat-Thin.ttf in Resources */,
 				FFB8165B2438CCC500064E21 /* Montserrat-ThinItalic.ttf in Resources */,
-				FFB816642438CCC500064E21 /* OFL.txt in Resources */,
 				FFD662C22437223100C0C3D6 /* LaunchScreen.storyboard in Resources */,
 				FFD662BF2437223100C0C3D6 /* Assets.xcassets in Resources */,
 				FFB816582438CCC500064E21 /* Montserrat-Medium.ttf in Resources */,
@@ -563,29 +611,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDE4626243C768900A12D8B /* ItemsViewModel.swift in Sources */,
 				FFB816712438FAFE00064E21 /* HomeTableView.swift in Sources */,
 				FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */,
 				FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */,
 				FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */,
 				FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */,
 				FFB8162B24387ADA00064E21 /* Track.swift in Sources */,
+				FF5A5D26243C8CB200836FD3 /* SPTAnimationProperties.swift in Sources */,
 				FFB816362438979B00064E21 /* ItemCollectionView.swift in Sources */,
 				FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */,
 				FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */,
 				FFB8166D2438D68A00064E21 /* ItemTableViewCell.swift in Sources */,
+				FFDE462C243C835D00A12D8B /* SPTLayout.swift in Sources */,
 				FFB8162924387A9800064E21 /* Artist.swift in Sources */,
 				FFD662B62437222D00C0C3D6 /* AppDelegate.swift in Sources */,
 				FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */,
-				FFB8163A243899D600064E21 /* BrandColors.swift in Sources */,
+				FFB8163A243899D600064E21 /* SPTBrandColors.swift in Sources */,
 				FFA929112437A29D0006F5CA /* Common.swift in Sources */,
 				FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */,
 				FFA929142437B0340006F5CA /* Album.swift in Sources */,
 				FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,
 				FFB816332438970600064E21 /* HomeViewController.swift in Sources */,
-				FFB8163B243899D600064E21 /* BrandTypography.swift in Sources */,
+				FFB8163B243899D600064E21 /* SPTBrandTypography.swift in Sources */,
 				FFB8163D2438A19400064E21 /* ItemCollectionViewCell.swift in Sources */,
 				FFB8162F24387CA200064E21 /* Result.swift in Sources */,
+				FF5A5D24243C8C4200836FD3 /* SPTPressCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
