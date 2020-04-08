@@ -71,8 +71,7 @@ extension SpotifyWebAPIService {
             }
             
             let url = URL(string: "\(self.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=10&offset=5")
-            
-            CommonFunctions.networkCall(url, token) { (data, error) in
+            NetworkService.networkCall(url, token) { (data, error) in
                 if let error = error {
                     print("Network call failed: ", error)
                     return
@@ -82,16 +81,14 @@ extension SpotifyWebAPIService {
                 
                 switch itemType {
                 case .tracks:
-                    guard let itemsResult: Result<Track> = CommonFunctions.parseResults(from: receivedData) else { return }
+                    guard let itemsResult: Result<Track> = NetworkService.parseResults(from: receivedData) else { return }
                     completion(itemsResult.items, nil, nil)
                 case .artists:
-                    guard let itemsResult: Result<Artist> = CommonFunctions.parseResults(from: receivedData) else { return }
+                    guard let itemsResult: Result<Artist> = NetworkService.parseResults(from: receivedData) else { return }
                     completion(nil, itemsResult.items, nil)
                 }
             }
         }
     }
-    
-    
     
 }
