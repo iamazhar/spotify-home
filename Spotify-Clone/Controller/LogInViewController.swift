@@ -41,7 +41,8 @@ class LogInViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
+    
+    /// Pop the log in view controller from the navigation stack.
     @objc func loginSuccessful() {
         self.navigationController?.popViewController(animated: true)
     }

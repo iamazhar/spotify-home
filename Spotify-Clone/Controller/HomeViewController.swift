@@ -9,7 +9,10 @@
 import UIKit
 import SpotifyLogin
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ItemsViewModelDelegate {
+    
+    // MARK: - View Model
+    var itemsViewModel = ItemsViewModel()
     
     // MARK: - Views
     
@@ -34,6 +37,8 @@ class HomeViewController: UIViewController {
     private lazy var tableView: HomeTableView = {
         let tv = HomeTableView(frame: .zero, style: .plain)
         tv.backgroundColor = .clear
+        tv.delegate = self
+        tv.dataSource = self
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()
@@ -48,6 +53,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        itemsViewModel.delegate = self
+        
         // setup nav bar and gradient background
         setupNavBar()
         setupBackgroundGradient()
@@ -61,34 +68,10 @@ class HomeViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        // API call
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { (tracks, _, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-            
-            if let userTracks = tracks {
-                self.tableView.tracks = userTracks
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
         
-        // API call
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { (_, artists, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-            if let userArtists = artists {
-                self.tableView.artists = userArtists
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        itemsViewModel.getTracks()
+        itemsViewModel.getArtists()
+        
     }
     
     /// Sets up the background gradient with design tokens from the Spotify Design System
@@ -141,3 +124,78 @@ class HomeViewController: UIViewController {
     
     
 }
+
+// MARK:- Table View delegate and data source methods
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemsViewModel.tracks.count + itemsViewModel.artists.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridTableViewCell
+            cell.sectionLabel.text = "Good evening"
+            cell.gridCollectionView.tracks = Array<Track>(itemsViewModel.tracks.prefix(6))
+            return cell
+        case 1:
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            cell.cellType = .small
+            cell.backgroundColor = .red
+            cell.sectionLabel.text = "Your top tracks"
+            cell.itemCollectionView.tracks = itemsViewModel.tracks
+            return cell
+        case 2:
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            cell.sectionLabel.text = "Your top artists"
+            cell.itemCollectionView.artists = itemsViewModel.artists
+            return cell
+        default:
+            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            cell.sectionLabel.text = "Your top tracks"
+            cell.itemCollectionView.tracks = itemsViewModel.tracks
+            return cell
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return SPTHomeSectionHeight.grid.value
+        case 1:
+            return SPTHomeSectionHeight.itemSmall.value
+        default:
+            return SPTHomeSectionHeight.itemRegular.value
+        }
+
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.selectionStyle = .none
+    }
+    
+}
+
+// MARK: - View model delegate method
+extension HomeViewController {
+    /// Reload table view when track or artist data is received.
+    func didReceiveItemData() {
+        self.tableView.reloadData()
+    }
+    
+    /// Print the error received when fetching data from view model fails.
+    /// - Parameter error: Error object returned from the SpotfyWebAPIService.
+    func didFailReceivingData(with error: Error) {
+        print("Failed to fetch data from view model:", error)
+    }
+}
+
+

@@ -8,27 +8,13 @@
 
 import UIKit
 
-public enum CellType: String {
-    case small, regular
-    
-    var value: CGSize {
-        switch self {
-        case .small:
-            return CGSize(width: 113, height: 150)
-        case .regular:
-            return CGSize(width: 160, height: 200)
-        }
-    }
-}
-
-private let reuseIdentifier = "item-cell"
-
+/// Collection view for Carousel style section.
 class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var tracks: [Track] = []
     public var artists: [Artist] = []
     
-    public var cellType: CellType = .regular
+    public var cellType: SPTCarouselCellSize = .regular
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -36,7 +22,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         dataSource = self
         delegate = self
         
-        register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: Common.itemReuseIdentifier)
         
         setupLayout()
         
@@ -46,8 +32,8 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
-        layout.minimumLineSpacing = 10
+        layout.sectionInset = SPTInsets.item.value
+        layout.minimumLineSpacing = SPTMinimumCellSpacing.lineSpacing.value
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout
         showsHorizontalScrollIndicator = false
@@ -67,7 +53,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Common.itemReuseIdentifier, for: indexPath) as! ItemCollectionViewCell
         
         if tracks.isEmpty {
             let imagePath = artists[indexPath.item].images?[1].url
