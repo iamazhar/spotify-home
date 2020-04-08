@@ -28,7 +28,7 @@ public class ItemsViewModel {
     
     /// Fetch user's top Tracks data from SpotifyWebAPIService.
     func getTracks() {
-        sptWebAPIService.sptUserTop(itemType: .tracks) { [weak self] (tracks, _, error) in
+        sptWebAPIService.sptUserTop(itemType: .tracks, count: 10) { [weak self] (tracks, _, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
@@ -45,7 +45,7 @@ public class ItemsViewModel {
     
     /// Fetch user's top Artists data from SpotifyWebAPIService.
     func getArtists() {
-        sptWebAPIService.sptUserTop(itemType: .artists) { [weak self] (_, artists, error) in
+        sptWebAPIService.sptUserTop(itemType: .artists, count: 10) { [weak self] (_, artists, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)

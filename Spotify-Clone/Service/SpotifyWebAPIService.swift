@@ -25,20 +25,22 @@ public enum ItemType: String {
 
 class SpotifyWebAPIService {
     
+    var networkService: NetworkService
+    
+    init(networkService: NetworkService) {
+        self.networkService = networkService
+    }
+    
     /// Spotify Web API base URL
     private let baseUrl: String = "https://api.spotify.com/v1/me"
-    
-    /// Singleton object that provides access to the API methods.
-//    public static let shared = SpotifyWebAPIService()
-    
     
     /// Public method to provide the logged in user's top tracks and artists.
     /// - Parameters:
     ///   - itemType: Enum that represents the track or artist type.
     ///   - completion: Escaping closure that provides three optionals. [Track]? ,[Artist]?, and Error?
     /// - Returns: nil
-    public func sptUserTop(itemType: ItemType, completion: @escaping ([Track]?, [Artist]?, Error?) -> ()) {
-        sptPrivateUserTop(itemType: itemType) { (tracks, artists, error) in
+    public func sptUserTop(itemType: ItemType, count: Int, completion: @escaping ([Track]?, [Artist]?, Error?) -> ()) {
+        sptPrivateUserTop(itemType: itemType, count: count) { (tracks, artists, error) in
             if let error = error {
                 completion(nil, nil, error)
             }
@@ -61,17 +63,23 @@ extension SpotifyWebAPIService {
     ///   - itemType: Enum that provides .artist or .track values.
     ///   - completion: Escaping closure that provides three optional objects. [Track]?, [Artist]?, and Error?
     /// - Returns: nil
-    private func sptPrivateUserTop(itemType: ItemType, completion: @escaping ([Track]?, [Artist]?, Error?) ->()) {
+    private func sptPrivateUserTop(itemType: ItemType, count: Int, completion: @escaping ([Track]?, [Artist]?, Error?) ->()) {
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
-            guard let self = self else { return }
+            guard let strongSelf = self else { return }
             if let error = error {
                 print("Failed to get access token", error)
                 completion(nil, nil, error)
                 return
             }
             
-            let url = URL(string: "\(self.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=10&offset=5")
-            NetworkService.networkCall(url, token) { (data, error) in
+            guard let url = URL(string: "\(strongSelf.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=\(count)&offset=5") else { return }
+            
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
+            
+            strongSelf.networkService.networkCall(request) { (data, error) in
                 if let error = error {
                     print("Network call failed: ", error)
                     return

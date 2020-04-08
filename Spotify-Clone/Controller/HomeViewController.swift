@@ -12,7 +12,7 @@ import SpotifyLogin
 class HomeViewController: UIViewController, ItemsViewModelDelegate {
     
     // MARK: - View Model
-    var itemsViewModel = ItemsViewModel(sptWebAPIService: SpotifyWebAPIService())
+    var itemsViewModel = ItemsViewModel(sptWebAPIService: SpotifyWebAPIService(networkService: NetworkService()))
     
     // MARK: - Views
     
@@ -72,6 +72,8 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
         itemsViewModel.getTracks()
         itemsViewModel.getArtists()
         
+        checkAccessToken()
+        
     }
     
     /// Sets up the background gradient with design tokens from the Spotify Design System
@@ -92,10 +94,11 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
     /// Check if the access token exists. Based on the returned boolean value the log in controller is pushed onto the navigation stack.
     fileprivate func checkAccessToken() {
         let sptAuthService = SpotifyAuthService()
-        sptAuthService.sptCheckAccessToken { [weak self] (exists, error) in
+        sptAuthService.sptCheckAccessToken { [weak self] (exists, token , error) in
             if let error = error {
                 print("Error Checking Access Token: ", error.localizedDescription)
             }
+            print(token ?? "")
             exists ? print(exists) : self?.showLoginFlow()
         }
     }
