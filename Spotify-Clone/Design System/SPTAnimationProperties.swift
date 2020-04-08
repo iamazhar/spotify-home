@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Enumeration for cell press animation properties.
 public enum SPTAnimationPressCellProperty: String {
     case
     touchDownDuration,

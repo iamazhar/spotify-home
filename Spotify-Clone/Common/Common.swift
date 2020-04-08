@@ -9,6 +9,10 @@
 import Foundation
 
 struct Common {
-    /// Constant for the key string used to store access token as a Key-value pair.
+    /// Constant for key string used to store access token as a Key-value pair.
     static let kAccessTokenKey = "access-token-key"
+    
+    /// Reuse identifiers
+    static let itemReuseIdentifier = "item-cell"
+    static let gridItemReuseIdentifier = "grid-cell"
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Generic Result struct that can help parse a response that has top level key "items"
 struct Result<T: Codable>: Codable  {
     var items: [T]
     

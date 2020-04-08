@@ -8,8 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "grid-cell"
-
+/// Collection view for grid style section.
 class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var tracks: [Track] = []
@@ -20,7 +19,7 @@ class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         dataSource = self
         delegate = self
         
-        register(GridItemCollectionViewCell.self, forCellWithReuseIdentifier:  reuseIdentifier)
+        register(GridItemCollectionViewCell.self, forCellWithReuseIdentifier:  Common.gridItemReuseIdentifier)
         
         setupLayout()
     }
@@ -46,7 +45,7 @@ class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GridItemCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridItemCollectionViewCell
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
         cell.itemTitle = tracks[indexPath.item].name

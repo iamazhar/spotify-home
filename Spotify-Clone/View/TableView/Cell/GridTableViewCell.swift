@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Table view cell for grid style section.
 class GridTableViewCell: UITableViewCell {
     
     private var containerStackView: UIStackView = {
@@ -22,12 +23,12 @@ class GridTableViewCell: UITableViewCell {
     var sectionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: homeSectionTitle.fontName, size: homeSectionTitle.fontSize)
+        label.font = UIFont(name: SPTFont.homeSectionTitle.value.fontName, size: SPTFont.homeSectionTitle.value.fontSize)
         label.text = "Good Evening"
         return label
     }()
     
-    var gridItemCollectionView: GridItemCollectionView = {
+    var gridCollectionView: GridItemCollectionView = {
         let cv = GridItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
@@ -43,12 +44,12 @@ class GridTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = .clear
         
         containerStackView.addArrangedSubview(sectionLabel)
-        containerStackView.addArrangedSubview(gridItemCollectionView)
+        containerStackView.addArrangedSubview(gridCollectionView)
         
         NSLayoutConstraint.activate([
-            gridItemCollectionView.heightAnchor.constraint(equalToConstant: 184),
-            gridItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
-            gridItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
+            gridCollectionView.heightAnchor.constraint(equalToConstant: 184),
+            gridCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
+            gridCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
         
         addSubview(containerStackView)

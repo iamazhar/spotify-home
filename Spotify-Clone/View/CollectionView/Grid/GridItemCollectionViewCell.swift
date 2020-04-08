@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+/// Cell for grid style items.
 class GridItemCollectionViewCell: UICollectionViewCell {
     
     var didScaleDownOnTouch = false
@@ -63,9 +64,9 @@ class GridItemCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 2
         label.lineBreakMode = .byTruncatingTail
         label.text = "After Hours"
-        label.font = UIFont(name: recentlyPlayedTitle.fontName,
-                            size: recentlyPlayedTitle.fontSize)
-        label.textColor = recentlyPlayedTitle.textColor
+        label.font = UIFont(name: SPTFont.recentlyPlayedTitle.value.fontName,
+                            size: SPTFont.recentlyPlayedTitle.value.fontSize)
+        label.textColor = SPTFont.recentlyPlayedTitle.value.textColor
         return label
     }()
     

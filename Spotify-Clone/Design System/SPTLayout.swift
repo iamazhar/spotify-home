@@ -86,6 +86,7 @@ public enum SPTInsets: CGFloat {
     }
 }
 
+/// Size of rectangular artwork image for varying cell styles.
 public enum SPTArtworkRectSize: CGFloat {
     case grid
     var value: CGFloat {

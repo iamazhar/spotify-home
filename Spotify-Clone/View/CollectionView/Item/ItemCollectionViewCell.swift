@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+/// Collection view cell for carousel style item.
 class ItemCollectionViewCell: UICollectionViewCell {
     
     var didScaleDownOnTouch = false
@@ -51,9 +52,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = "After Hours"
-        label.font = UIFont(name: recentlyPlayedTitle.fontName,
-                            size: recentlyPlayedTitle.fontSize)
-        label.textColor = recentlyPlayedTitle.textColor
+        label.font = UIFont(name: SPTFont.recentlyPlayedTitle.value.fontName,
+                            size: SPTFont.recentlyPlayedTitle.value.fontSize)
+        label.textColor = SPTFont.recentlyPlayedTitle.value.textColor
         return label
     }()
     

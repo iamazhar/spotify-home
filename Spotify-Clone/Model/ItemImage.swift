@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Codable ItemImage struct to parse Image array in API response.
 struct ItemImage: Codable {
     var height: Int
     var width: Int

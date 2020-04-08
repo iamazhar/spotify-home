@@ -8,8 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "item-cell"
-
+/// Collection view for Carousel style section.
 class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var tracks: [Track] = []
@@ -23,7 +22,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         dataSource = self
         delegate = self
         
-        register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: Common.itemReuseIdentifier)
         
         setupLayout()
         
@@ -54,7 +53,7 @@ class ItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Common.itemReuseIdentifier, for: indexPath) as! ItemCollectionViewCell
         
         if tracks.isEmpty {
             let imagePath = artists[indexPath.item].images?[1].url

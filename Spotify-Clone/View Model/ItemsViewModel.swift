@@ -9,35 +9,50 @@
 import Foundation
 
 protocol ItemsViewModelDelegate: class {
-    func didReceiveTracksData(with tracks: [Track])
-    func didReceiveArtistsData(with artists: [Artist])
+    func didReceiveItemData()
+    func didFailReceivingData(with error: Error)
 }
 
 public class ItemsViewModel {
     
+    var tracks = [Track]()
+    var artists = [Artist]()
+    
+    
     weak var delegate: ItemsViewModelDelegate?
     
-    /// Fetch data from service method.
+    /// Fetch user's top Tracks data from SpotifyWebAPIService.
     func getTracks() {
         SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { [weak self] (tracks, _, error) in
+            guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
+                strongSelf.delegate?.didFailReceivingData(with: error)
             }
-            guard let strongSelf = self else { return }
-            if let userTracks = tracks {
-                strongSelf.delegate?.didReceiveTracksData(with: userTracks)
+            
+            guard let userTracks = tracks else { return }
+            strongSelf.tracks = userTracks
+            DispatchQueue.main.async {
+                strongSelf.delegate?.didReceiveItemData()
             }
         }
     }
     
+    /// Fetch user's top Artists data from SpotifyWebAPIService.
     func getArtists() {
         SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { [weak self] (_, artists, error) in
+            guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
+                strongSelf.delegate?.didFailReceivingData(with: error)
             }
-            if let strongSelf = self, let userArtists = artists {
-                strongSelf.delegate?.didReceiveArtistsData(with: userArtists)
+            
+            guard let userArtists = artists else { return }
+            strongSelf.artists = userArtists
+            DispatchQueue.main.async {
+                strongSelf.delegate?.didReceiveItemData()
             }
+            
         }
     }
     

@@ -10,15 +10,16 @@ import UIKit
 
 private var cellHeightAdjust: CGFloat = 30.0
 
+/// Table view cell for carousel style section.
 class ItemTableViewCell: UITableViewCell {
     
     public var cellType: SPTCarouselCellSize = .regular {
         didSet {
-            topItemCollectionView.cellType = cellType
+            itemCollectionView.cellType = cellType
             NSLayoutConstraint.activate([
-                topItemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height + cellHeightAdjust)
+                itemCollectionView.heightAnchor.constraint(equalToConstant: cellType.value.height + cellHeightAdjust)
             ])
-            topItemCollectionView.updateConstraints()
+            itemCollectionView.updateConstraints()
         }
     }
     
@@ -33,12 +34,12 @@ class ItemTableViewCell: UITableViewCell {
     
     var sectionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: homeSectionTitle.fontName, size: homeSectionTitle.fontSize)
+        label.font = UIFont(name: SPTFont.homeSectionTitle.value.fontName, size: SPTFont.homeSectionTitle.value.fontSize)
         label.text = "Top Tracks"
         return label
     }()
 
-    var topItemCollectionView: ItemCollectionView = {
+    var itemCollectionView: ItemCollectionView = {
         let cv = ItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
@@ -55,14 +56,11 @@ class ItemTableViewCell: UITableViewCell {
     
         containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
         containerStackView.addArrangedSubview(sectionLabel)
-//        NSLayoutConstraint.activate([
-//            sectionLabel.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor, constant: 15.0)
-//        ])
         
-        containerStackView.addArrangedSubview(topItemCollectionView)
+        containerStackView.addArrangedSubview(itemCollectionView)
         NSLayoutConstraint.activate([
-            topItemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
-            topItemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
+            itemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
+            itemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
         
         addSubview(containerStackView)
