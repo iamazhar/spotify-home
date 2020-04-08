@@ -17,13 +17,18 @@ public class ItemsViewModel {
     
     var tracks = [Track]()
     var artists = [Artist]()
+    var sptWebAPIService: SpotifyWebAPIService
     
     
     weak var delegate: ItemsViewModelDelegate?
     
+    init(sptWebAPIService: SpotifyWebAPIService) {
+        self.sptWebAPIService = sptWebAPIService
+    }
+    
     /// Fetch user's top Tracks data from SpotifyWebAPIService.
     func getTracks() {
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .tracks) { [weak self] (tracks, _, error) in
+        sptWebAPIService.sptUserTop(itemType: .tracks) { [weak self] (tracks, _, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
@@ -40,7 +45,7 @@ public class ItemsViewModel {
     
     /// Fetch user's top Artists data from SpotifyWebAPIService.
     func getArtists() {
-        SpotifyWebAPIService.shared.sptUserTop(itemType: .artists) { [weak self] (_, artists, error) in
+        sptWebAPIService.sptUserTop(itemType: .artists) { [weak self] (_, artists, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)

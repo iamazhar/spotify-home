@@ -29,7 +29,7 @@ class SpotifyWebAPIService {
     private let baseUrl: String = "https://api.spotify.com/v1/me"
     
     /// Singleton object that provides access to the API methods.
-    public static let shared = SpotifyWebAPIService()
+//    public static let shared = SpotifyWebAPIService()
     
     
     /// Public method to provide the logged in user's top tracks and artists.
