@@ -41,7 +41,7 @@ class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

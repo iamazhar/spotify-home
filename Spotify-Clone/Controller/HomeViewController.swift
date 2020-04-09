@@ -55,6 +55,9 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
         
         itemsViewModel.delegate = self
         
+        itemsViewModel.getTracks()
+        itemsViewModel.getArtists()
+        
         // setup nav bar and gradient background
         setupNavBar()
         setupBackgroundGradient()
@@ -67,10 +70,6 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-        
-        itemsViewModel.getTracks()
-        itemsViewModel.getArtists()
         
         checkAccessToken()
         
@@ -104,10 +103,11 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
     }
     
     /// Set up the navigation bar with a clear background and shadows. Add the sign out button as a navigation bar sub view
-    fileprivate func setupNavBar() {
+    func setupNavBar() {
         // make nav bar visible if hidden
-        if navigationController?.navigationBar.isHidden == true {
-            navigationController?.navigationBar.isHidden = false
+        guard let navBar = navigationController?.navigationBar else { return }
+        if navBar.isHidden == true {
+            navBar.isHidden = false
         }
         
         //style the nav bar

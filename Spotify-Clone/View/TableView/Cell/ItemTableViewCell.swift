@@ -55,6 +55,7 @@ class ItemTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = .clear
     
         containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
+        
         containerStackView.addArrangedSubview(sectionLabel)
         
         containerStackView.addArrangedSubview(itemCollectionView)
@@ -66,7 +67,7 @@ class ItemTableViewCell: UITableViewCell {
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])

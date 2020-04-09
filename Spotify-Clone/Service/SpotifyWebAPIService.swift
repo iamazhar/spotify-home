@@ -45,12 +45,12 @@ class SpotifyWebAPIService {
                 completion(nil, nil, error)
             }
             
-            if tracks != nil {
-                completion(tracks, nil, nil)
-            } else if artists != nil {
+            switch itemType {
+            case .artists:
                 completion(nil, artists, nil)
+            case .tracks:
+                completion(tracks, nil, nil)
             }
-            
         }
     }
 }

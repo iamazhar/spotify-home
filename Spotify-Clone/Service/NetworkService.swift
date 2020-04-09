@@ -43,12 +43,6 @@ class NetworkService {
                 completion(nil, error)
                 return
             }
-            
-//            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-//                print("Response failed with code: ", response ?? "Failed")
-//                return
-//            }
-            
             completion(data, nil)
         }
     }
