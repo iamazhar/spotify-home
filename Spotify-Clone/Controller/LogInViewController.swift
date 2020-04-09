@@ -9,6 +9,7 @@
 import UIKit
 import SpotifyLogin
 
+/// Log in screen view controller
 class LogInViewController: UIViewController {
 
     private lazy var loginButton: SpotifyLoginButton = {

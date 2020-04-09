@@ -8,11 +8,13 @@
 
 import Foundation
 
+/// Protocol with methods that fire when data has been received or when failed to receive.
 protocol ItemsViewModelDelegate: class {
     func didReceiveItemData()
     func didFailReceivingData(with error: Error)
 }
 
+/// Items view model class that serves data to all views inside the tableview
 public class ItemsViewModel {
     
     var tracks = [Track]()

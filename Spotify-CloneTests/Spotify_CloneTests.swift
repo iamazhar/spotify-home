@@ -41,6 +41,7 @@ class Spotify_CloneTests: XCTestCase {
 
         let engine = NetworkEngineMock()
         let loader = NetworkService(engine: engine)
+        let expectation = self.expectation(description: "Check data match")
 
         var result = Data()
         let url = URL(string: "my/API")!
@@ -49,9 +50,11 @@ class Spotify_CloneTests: XCTestCase {
         loader.networkCall(request) { (data, error) in
             if let data = data {
                 result = data
+                expectation.fulfill()
             }
         }
         
+        waitForExpectations(timeout: 2, handler: nil)
         XCTAssertEqual(engine.request, request)
         XCTAssertEqual(result, "Hello World".data(using: .utf8)!)
     }

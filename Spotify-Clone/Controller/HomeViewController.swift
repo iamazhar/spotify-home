@@ -9,6 +9,7 @@
 import UIKit
 import SpotifyLogin
 
+/// Home screen view controller that includes a table view
 class HomeViewController: UIViewController, ItemsViewModelDelegate {
     
     // MARK: - View Model
