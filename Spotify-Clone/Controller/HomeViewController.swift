@@ -9,10 +9,11 @@
 import UIKit
 import SpotifyLogin
 
+/// Home screen view controller that includes a table view
 class HomeViewController: UIViewController, ItemsViewModelDelegate {
     
     // MARK: - View Model
-    var itemsViewModel = ItemsViewModel()
+    var itemsViewModel = ItemsViewModel(sptWebAPIService: SpotifyWebAPIService(networkService: NetworkService()))
     
     // MARK: - Views
     
@@ -55,6 +56,9 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
         
         itemsViewModel.delegate = self
         
+        itemsViewModel.getTracks()
+        itemsViewModel.getArtists()
+        
         // setup nav bar and gradient background
         setupNavBar()
         setupBackgroundGradient()
@@ -68,9 +72,7 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        
-        itemsViewModel.getTracks()
-        itemsViewModel.getArtists()
+        checkAccessToken()
         
     }
     
@@ -91,19 +93,22 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
     
     /// Check if the access token exists. Based on the returned boolean value the log in controller is pushed onto the navigation stack.
     fileprivate func checkAccessToken() {
-        SpotifyAuthService.shared.sptCheckAccessToken { [weak self] (exists, error) in
+        let sptAuthService = SpotifyAuthService()
+        sptAuthService.sptCheckAccessToken { [weak self] (exists, token , error) in
             if let error = error {
                 print("Error Checking Access Token: ", error.localizedDescription)
             }
+            print(token ?? "")
             exists ? print(exists) : self?.showLoginFlow()
         }
     }
     
     /// Set up the navigation bar with a clear background and shadows. Add the sign out button as a navigation bar sub view
-    fileprivate func setupNavBar() {
+    func setupNavBar() {
         // make nav bar visible if hidden
-        if navigationController?.navigationBar.isHidden == true {
-            navigationController?.navigationBar.isHidden = false
+        guard let navBar = navigationController?.navigationBar else { return }
+        if navBar.isHidden == true {
+            navBar.isHidden = false
         }
         
         //style the nav bar

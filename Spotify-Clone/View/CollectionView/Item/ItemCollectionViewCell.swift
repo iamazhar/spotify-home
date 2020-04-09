@@ -58,7 +58,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    public let artworkStackView: UIStackView = {
+    private let artworkStackView: UIStackView = {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.spacing = 8.0

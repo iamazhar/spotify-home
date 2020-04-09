@@ -49,7 +49,7 @@ extension SpotifyAuthService {
     /// - Parameter completion: Bool and optional Error objects.
     /// - Returns: void
     public func sptLogin(completion: @escaping (Bool, Error?) -> ()) {
-        SpotifyAuthService.shared.sptLoginPrivate { (handled, error) in
+        sptLoginPrivate { (handled, error) in
             if let error = error {
                 print("Failed to log in ")
                 completion(handled, error)
@@ -63,13 +63,13 @@ extension SpotifyAuthService {
     /// Public method to check if access token exists.
     /// - Parameter completion: Bool and optional Error object.
     /// - Returns: void
-    public func sptCheckAccessToken(completion: @escaping (Bool, Error?) -> ()) {
+    public func sptCheckAccessToken(completion: @escaping (Bool, String?, Error?) -> ()) {
         SpotifyLogin.shared.getAccessToken { (token, error) in
             if error != nil, token == nil {
-                completion(false, error)
+                completion(false, nil, error)
                 return
             }
-            completion(true, nil)
+            completion(true, token, nil)
         }
     }
 }

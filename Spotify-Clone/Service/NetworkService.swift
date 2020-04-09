@@ -10,7 +10,11 @@ import UIKit
 
 class NetworkService {
     
-    // MARK: - Generic parse function
+    private let engine: NetworkEngine
+    
+    init(engine: NetworkEngine = URLSession.shared) {
+        self.engine = engine
+    }
     
     /// Generic function that parses Data object into the specified type T using the JSONDecoder
     /// - Parameter data: Data type object
@@ -31,27 +35,15 @@ class NetworkService {
     ///   - url: target URL
     ///   - token: Access Token for the API endpoint
     ///   - completion: Escaping closure with optional Data and Error type objects.
-    static func networkCall(_ url: URL?, _ token: String?, completion: @escaping (Data?, Error?) -> Void) {
-        var request = URLRequest(url: url!)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
+    func networkCall(_ request: URLRequest, completion: @escaping (Data?, Error?) -> Void) {
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        engine.performRequest(for: request) { (data, response, error) in
             if let error = error {
                 print("Error: ", error.localizedDescription)
                 completion(nil, error)
                 return
             }
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Response failed with code: ", response ?? "Failed")
-                return
-            }
-            
             completion(data, nil)
-            
-            
-        }.resume()
+        }
     }
 }

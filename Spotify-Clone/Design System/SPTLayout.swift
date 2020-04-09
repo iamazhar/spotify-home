@@ -72,7 +72,7 @@ public enum SPTInsets: CGFloat {
         switch self {
         case .item:
             return UIEdgeInsets(top: 0,
-                                left: 15.0,
+                                left: 0.0,
                                 bottom: 15.0,
                                 right: 15.0)
         case .grid:

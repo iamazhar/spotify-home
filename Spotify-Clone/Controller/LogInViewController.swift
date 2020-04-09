@@ -9,33 +9,37 @@
 import UIKit
 import SpotifyLogin
 
+/// Log in screen view controller
 class LogInViewController: UIViewController {
 
-    var loginButton: UIButton?
+    private lazy var loginButton: SpotifyLoginButton = {
+        let button = SpotifyLoginButton(viewController: self,
+        scopes: [.streaming,
+                 .userReadTop,
+                 .playlistReadPrivate,
+                 .userLibraryRead,
+                 .userReadEmail])
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.isHidden = true
         
-        let button = SpotifyLoginButton(viewController: self,
-                                        scopes: [.streaming,
-                                                 .userReadTop,
-                                                 .playlistReadPrivate,
-                                                 .userLibraryRead,
-                                                 .userReadEmail])
-        self.view.addSubview(button)
-        self.loginButton = button
+        
+        self.view.addSubview(loginButton)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(loginSuccessful),
                                                name: .SpotifyLoginSuccessful,
                                                object: nil)
         
+        
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        loginButton?.center = self.view.center
+        loginButton.center = self.view.center
     }
 
     deinit {

@@ -22,7 +22,7 @@ class GridItemCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
+
     public var itemTitle: String? {
         didSet {
             if let title = itemTitle {
