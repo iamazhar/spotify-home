@@ -23,7 +23,7 @@
 		FFA929142437B0340006F5CA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA929132437B0340006F5CA /* Album.swift */; };
 		FFB8162924387A9800064E21 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162824387A9800064E21 /* Artist.swift */; };
 		FFB8162B24387ADA00064E21 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162A24387ADA00064E21 /* Track.swift */; };
-		FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162C24387B0200064E21 /* CommonFunctions.swift */; };
+		FFB8162D24387B0200064E21 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162C24387B0200064E21 /* NetworkService.swift */; };
 		FFB8162F24387CA200064E21 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8162E24387CA200064E21 /* Result.swift */; };
 		FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */; };
 		FFB816332438970600064E21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816322438970600064E21 /* HomeViewController.swift */; };
@@ -129,7 +129,7 @@
 		FFA929132437B0340006F5CA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		FFB8162824387A9800064E21 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		FFB8162A24387ADA00064E21 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		FFB8162C24387B0200064E21 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		FFB8162C24387B0200064E21 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FFB8162E24387CA200064E21 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPIService.swift; sourceTree = "<group>"; };
 		FFB816322438970600064E21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +220,7 @@
 		FF106FF02437957000723D3F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FFB8162C24387B0200064E21 /* NetworkService.swift */,
 				FF106FF12437958D00723D3F /* SpotifyAuthService.swift */,
 				FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */,
 			);
@@ -264,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				FFA929102437A29D0006F5CA /* Common.swift */,
-				FFB8162C24387B0200064E21 /* CommonFunctions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -367,10 +367,10 @@
 			isa = PBXGroup;
 			children = (
 				FF5A5D22243C8C1D00836FD3 /* Animation */,
-				FFDE4624243C764F00A12D8B /* View Model */,
 				FF99D0ED243A3BC50075A640 /* Extension */,
 				FFB81637243899B100064E21 /* Design System */,
 				FFB816342438976600064E21 /* View */,
+				FFDE4624243C764F00A12D8B /* View Model */,
 				FF106FEF2437955700723D3F /* Controller */,
 				FFA929122437B0290006F5CA /* Model */,
 				FFA9290F2437A2830006F5CA /* Common */,
@@ -620,7 +620,7 @@
 				FFB8162B24387ADA00064E21 /* Track.swift in Sources */,
 				FF5A5D26243C8CB200836FD3 /* SPTAnimationProperties.swift in Sources */,
 				FFB816362438979B00064E21 /* ItemCollectionView.swift in Sources */,
-				FFB8162D24387B0200064E21 /* CommonFunctions.swift in Sources */,
+				FFB8162D24387B0200064E21 /* NetworkService.swift in Sources */,
 				FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */,
 				FFB8166D2438D68A00064E21 /* ItemTableViewCell.swift in Sources */,
 				FFDE462C243C835D00A12D8B /* SPTLayout.swift in Sources */,

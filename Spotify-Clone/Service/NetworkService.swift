@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommonFunctions {
+class NetworkService {
     
     // MARK: - Generic parse function
     
