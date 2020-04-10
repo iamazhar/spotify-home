@@ -9,6 +9,7 @@
 #import "HomeTableView.h"
 #import "Spotify_Clone-Swift.h"
 
+/// Table view for Home screen
 @implementation HomeTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
