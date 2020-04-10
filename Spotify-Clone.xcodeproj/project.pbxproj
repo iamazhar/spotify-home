@@ -17,6 +17,7 @@
 		FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */; };
 		FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */; };
 		FF651D5C24407A7900EDA138 /* HomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF651D5B24407A7900EDA138 /* HomeTableView.m */; };
+		FF651D632440816600EDA138 /* UIColor+BrandColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF651D612440816600EDA138 /* UIColor+BrandColors.m */; };
 		FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */; };
 		FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EB243A0DCA0075A640 /* ItemImage.swift */; };
 		FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */; };
@@ -30,7 +31,6 @@
 		FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */; };
 		FFB816332438970600064E21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816322438970600064E21 /* HomeViewController.swift */; };
 		FFB816362438979B00064E21 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816352438979B00064E21 /* ItemCollectionView.swift */; };
-		FFB8163A243899D600064E21 /* SPTBrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81638243899D600064E21 /* SPTBrandColors.swift */; };
 		FFB8163B243899D600064E21 /* SPTBrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB81639243899D600064E21 /* SPTBrandTypography.swift */; };
 		FFB8163D2438A19400064E21 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */; };
 		FFB8163F2438A9CD00064E21 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8163E2438A9CD00064E21 /* Kingfisher.framework */; };
@@ -126,6 +126,8 @@
 		FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF651D5A24407A7900EDA138 /* HomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableView.h; sourceTree = "<group>"; };
 		FF651D5B24407A7900EDA138 /* HomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableView.m; sourceTree = "<group>"; };
+		FF651D612440816600EDA138 /* UIColor+BrandColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BrandColors.m"; sourceTree = "<group>"; };
+		FF651D622440816600EDA138 /* UIColor+BrandColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BrandColors.h"; sourceTree = "<group>"; };
 		FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
 		FF99D0EB243A0DCA0075A640 /* ItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImage.swift; sourceTree = "<group>"; };
 		FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 		FFB8163024388DC600064E21 /* SpotifyWebAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPIService.swift; sourceTree = "<group>"; };
 		FFB816322438970600064E21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFB816352438979B00064E21 /* ItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
-		FFB81638243899D600064E21 /* SPTBrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTBrandColors.swift; sourceTree = "<group>"; };
 		FFB81639243899D600064E21 /* SPTBrandTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTBrandTypography.swift; sourceTree = "<group>"; };
 		FFB8163C2438A19400064E21 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFB8163E2438A9CD00064E21 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -300,7 +301,8 @@
 		FFB81637243899B100064E21 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
-				FFB81638243899D600064E21 /* SPTBrandColors.swift */,
+				FF651D622440816600EDA138 /* UIColor+BrandColors.h */,
+				FF651D612440816600EDA138 /* UIColor+BrandColors.m */,
 				FFB81639243899D600064E21 /* SPTBrandTypography.swift */,
 				FFDE462B243C835D00A12D8B /* SPTLayout.swift */,
 				FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */,
@@ -635,13 +637,13 @@
 				FFB8162924387A9800064E21 /* Artist.swift in Sources */,
 				FFD662B62437222D00C0C3D6 /* AppDelegate.swift in Sources */,
 				FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */,
-				FFB8163A243899D600064E21 /* SPTBrandColors.swift in Sources */,
 				FFA929112437A29D0006F5CA /* Common.swift in Sources */,
 				FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */,
 				FFA929142437B0340006F5CA /* Album.swift in Sources */,
 				FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,
 				FFB816332438970600064E21 /* HomeViewController.swift in Sources */,
+				FF651D632440816600EDA138 /* UIColor+BrandColors.m in Sources */,
 				FF651D5C24407A7900EDA138 /* HomeTableView.m in Sources */,
 				FFB8163B243899D600064E21 /* SPTBrandTypography.swift in Sources */,
 				FFB8163D2438A19400064E21 /* ItemCollectionViewCell.swift in Sources */,

@@ -80,7 +80,7 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
     fileprivate func setupBackgroundGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.frame
-        layer.colors = [UIColor.homeBgGradientTop().cgColor, UIColor.homeBgGradientBottom().cgColor]
+        layer.colors = [UIColor().homeBgGradientTop().cgColor, UIColor().homeBgGradientBottom().cgColor]
         layer.locations = [0.0, 0.2]
         view.layer.addSublayer(layer)
     }
