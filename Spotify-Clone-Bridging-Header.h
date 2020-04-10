@@ -10,6 +10,6 @@
 #define Spotify_Clone_Bridging_Header_h
 
 #import <SpotifyiOS/SpotifyiOS.h>
-
+#import "HomeTableView.h"
 
 #endif /* Spotify_Clone_Bridging_Header_h */

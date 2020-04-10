@@ -11,6 +11,7 @@ import UIKit
 private var cellHeightAdjust: CGFloat = 30.0
 
 /// Table view cell for carousel style section.
+@objcMembers
 class ItemTableViewCell: UITableViewCell {
     
     public var cellType: SPTCarouselCellSize = .regular {

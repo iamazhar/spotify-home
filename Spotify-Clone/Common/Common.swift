@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Common {
+@objcMembers
+class Common: NSObject {
     /// Constant for key string used to store access token as a Key-value pair.
     static let kAccessTokenKey = "access-token-key"
     

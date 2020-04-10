@@ -22,6 +22,7 @@ public class ItemsViewModel {
     var sptWebAPIService: SpotifyWebAPIService
     
     
+    
     weak var delegate: ItemsViewModelDelegate?
     
     init(sptWebAPIService: SpotifyWebAPIService) {

@@ -16,6 +16,7 @@
 		FF5A5D26243C8CB200836FD3 /* SPTAnimationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */; };
 		FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */; };
 		FF5CD92D243905CA00AD0701 /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */; };
+		FF651D5C24407A7900EDA138 /* HomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF651D5B24407A7900EDA138 /* HomeTableView.m */; };
 		FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */; };
 		FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EB243A0DCA0075A640 /* ItemImage.swift */; };
 		FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */; };
@@ -54,7 +55,6 @@
 		FFB816682438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816552438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf */; };
 		FFB816692438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFB816562438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf */; };
 		FFB8166D2438D68A00064E21 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8166C2438D68A00064E21 /* ItemTableViewCell.swift */; };
-		FFB816712438FAFE00064E21 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB816702438FAFE00064E21 /* HomeTableView.swift */; };
 		FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; };
 		FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -124,6 +124,8 @@
 		FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTAnimationProperties.swift; sourceTree = "<group>"; };
 		FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionView.swift; sourceTree = "<group>"; };
 		FF5CD92C243905CA00AD0701 /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF651D5A24407A7900EDA138 /* HomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableView.h; sourceTree = "<group>"; };
+		FF651D5B24407A7900EDA138 /* HomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableView.m; sourceTree = "<group>"; };
 		FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
 		FF99D0EB243A0DCA0075A640 /* ItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImage.swift; sourceTree = "<group>"; };
 		FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,7 +163,6 @@
 		FFB816552438CCC500064E21 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		FFB816562438CCC500064E21 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		FFB8166C2438D68A00064E21 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		FFB816702438FAFE00064E21 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 		FFD662B22437222D00C0C3D6 /* Spotify-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +252,8 @@
 		FF5CD9282439050B00AD0701 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				FFB816702438FAFE00064E21 /* HomeTableView.swift */,
+				FF651D5A24407A7900EDA138 /* HomeTableView.h */,
+				FF651D5B24407A7900EDA138 /* HomeTableView.m */,
 				FFDE4629243C831D00A12D8B /* Cell */,
 			);
 			path = TableView;
@@ -618,7 +620,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDE4626243C768900A12D8B /* ItemsViewModel.swift in Sources */,
-				FFB816712438FAFE00064E21 /* HomeTableView.swift in Sources */,
 				FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */,
 				FFB8163124388DC600064E21 /* SpotifyWebAPIService.swift in Sources */,
 				FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */,
@@ -641,6 +642,7 @@
 				FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,
 				FFB816332438970600064E21 /* HomeViewController.swift in Sources */,
+				FF651D5C24407A7900EDA138 /* HomeTableView.m in Sources */,
 				FFB8163B243899D600064E21 /* SPTBrandTypography.swift in Sources */,
 				FFB8163D2438A19400064E21 /* ItemCollectionViewCell.swift in Sources */,
 				FFB8162F24387CA200064E21 /* Result.swift in Sources */,
@@ -811,6 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RD7HUSH4T7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -837,6 +840,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RD7HUSH4T7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
