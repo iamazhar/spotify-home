@@ -80,7 +80,7 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
     fileprivate func setupBackgroundGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.frame
-        layer.colors = [UIColor.homeBgGradientTop().cgColor, UIColor.homeBgGradientBottom().cgColor]
+        layer.colors = [UIColor().homeBgGradientTop().cgColor, UIColor().homeBgGradientBottom().cgColor]
         layer.locations = [0.0, 0.2]
         view.layer.addSublayer(layer)
     }
@@ -150,17 +150,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cellType = .small
             cell.backgroundColor = .red
             cell.sectionLabel.text = "Your top tracks"
-            cell.itemCollectionView.tracks = itemsViewModel.tracks
+            cell.itemCollectionView.tracks = itemsViewModel.tracks.shuffled()
             return cell
         case 2:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top artists"
-            cell.itemCollectionView.artists = itemsViewModel.artists
+            cell.itemCollectionView.artists = itemsViewModel.artists.shuffled()
             return cell
         default:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top tracks"
-            cell.itemCollectionView.tracks = itemsViewModel.tracks
+            cell.itemCollectionView.tracks = itemsViewModel.tracks.shuffled()
             return cell
         }
         

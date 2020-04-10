@@ -11,6 +11,7 @@ import UIKit
 private var cellHeightAdjust: CGFloat = 30.0
 
 /// Table view cell for carousel style section.
+@objcMembers
 class ItemTableViewCell: UITableViewCell {
     
     public var cellType: SPTCarouselCellSize = .regular {
@@ -28,6 +29,15 @@ class ItemTableViewCell: UITableViewCell {
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.alignment = .leading
         sv.axis = .vertical
+        sv.spacing = 15.0
+        return sv
+    }()
+    
+    private var labelStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.alignment = .center
+        sv.axis = .horizontal
         sv.spacing = 15.0
         return sv
     }()
@@ -53,21 +63,25 @@ class ItemTableViewCell: UITableViewCell {
     
     fileprivate func setupLayout() {
         self.contentView.backgroundColor = .clear
+        
+        // section label stack view
+        labelStackView.addArrangedSubview(UIView())
+        labelStackView.addArrangedSubview(sectionLabel)
     
+        // container stack view
         containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
-        
-        containerStackView.addArrangedSubview(sectionLabel)
-        
+        containerStackView.addArrangedSubview(labelStackView)
         containerStackView.addArrangedSubview(itemCollectionView)
         NSLayoutConstraint.activate([
             itemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             itemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
         
+        // add to view
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])

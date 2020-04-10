@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 
 /// Cell for grid style items.
+@objcMembers
 class GridItemCollectionViewCell: UICollectionViewCell {
     
     var didScaleDownOnTouch = false
@@ -35,7 +36,7 @@ class GridItemCollectionViewCell: UICollectionViewCell {
     // MARK:- Views
     private let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.bgGridCell()
+        view.backgroundColor = UIColor().bgGridCell()
         view.layer.cornerRadius = 3.0
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
