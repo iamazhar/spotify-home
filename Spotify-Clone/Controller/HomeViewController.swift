@@ -150,17 +150,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.cellType = .small
             cell.backgroundColor = .red
             cell.sectionLabel.text = "Your top tracks"
-            cell.itemCollectionView.tracks = itemsViewModel.tracks.shuffled()
+            cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 2:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top artists"
-            cell.itemCollectionView.artists = itemsViewModel.artists.shuffled()
+            cell.itemCollectionView.artists = itemsViewModel.artists
             return cell
         default:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top tracks"
-            cell.itemCollectionView.tracks = itemsViewModel.tracks.shuffled()
+            cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell
         }
         
