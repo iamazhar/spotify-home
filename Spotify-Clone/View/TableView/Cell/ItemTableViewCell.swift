@@ -33,6 +33,15 @@ class ItemTableViewCell: UITableViewCell {
         return sv
     }()
     
+    private var labelStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.alignment = .center
+        sv.axis = .horizontal
+        sv.spacing = 15.0
+        return sv
+    }()
+    
     var sectionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: SPTFont.homeSectionTitle.value.fontName, size: SPTFont.homeSectionTitle.value.fontSize)
@@ -54,17 +63,21 @@ class ItemTableViewCell: UITableViewCell {
     
     fileprivate func setupLayout() {
         self.contentView.backgroundColor = .clear
+        
+        // section label stack view
+        labelStackView.addArrangedSubview(UIView())
+        labelStackView.addArrangedSubview(sectionLabel)
     
+        // container stack view
         containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
-        
-        containerStackView.addArrangedSubview(sectionLabel)
-        
+        containerStackView.addArrangedSubview(labelStackView)
         containerStackView.addArrangedSubview(itemCollectionView)
         NSLayoutConstraint.activate([
             itemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
             itemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
         ])
         
+        // add to view
         addSubview(containerStackView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
