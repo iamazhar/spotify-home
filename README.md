@@ -3,11 +3,11 @@ Project is a clone of the Spotify home screen UI with networking data from the S
 
 The purpose of the app is to implement a Desing System using design tokens, Objective C and Swift interoperability, and Unit tests. The Project includes the Sketch file that was used to design the UI. The code is documented using Jazzy docs, this can be found within /docs. 
 
-##Swift Style Guide
+## Swift Style Guide
 
 Code follows Raywenderlich style guide.
 
-##Dependencies
+## Dependencies
 
 Thrid party framewoks and Library are managed using Cocoapods.
 
@@ -16,7 +16,7 @@ Carthage used
 - github "Alamofire/Alamofire" ~> 5.0
 - github "onevcat/Kingfisher" ~> 5.0
 
-##Folder Structure and Architecture
+## Folder Structure and Architecture
 
 Each Module Will have its own folder. eg -
 Views
