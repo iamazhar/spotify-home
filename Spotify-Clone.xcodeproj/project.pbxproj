@@ -12,6 +12,7 @@
 		FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF106FED243793A800723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FF12437958D00723D3F /* SpotifyAuthService.swift */; };
+		FF5270B124414D4F00C0EDC2 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5270B024414D4F00C0EDC2 /* NetworkTests.swift */; };
 		FF5A5D24243C8C4200836FD3 /* SPTPressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A5D23243C8C4200836FD3 /* SPTPressCell.swift */; };
 		FF5A5D26243C8CB200836FD3 /* SPTAnimationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */; };
 		FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */; };
@@ -120,6 +121,7 @@
 		FF106FEA2437937200723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FF106FED243793A800723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FF106FF12437958D00723D3F /* SpotifyAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthService.swift; sourceTree = "<group>"; };
+		FF5270B024414D4F00C0EDC2 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		FF5A5D23243C8C4200836FD3 /* SPTPressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTPressCell.swift; sourceTree = "<group>"; };
 		FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTAnimationProperties.swift; sourceTree = "<group>"; };
 		FF5CD92A243905B400AD0701 /* GridItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,15 @@
 				FFD662B72437222D00C0C3D6 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		FF5270B224414D5700C0EDC2 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF5270B024414D4F00C0EDC2 /* NetworkTests.swift */,
+				FFA6713D243E605B002907BD /* StaticData.swift */,
+			);
+			path = NetworkTests;
 			sourceTree = "<group>";
 		};
 		FF5A5D22243C8C1D00836FD3 /* Animations */ = {
@@ -420,8 +431,8 @@
 		FFD662CB2437223100C0C3D6 /* Spotify-CloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF5270B224414D5700C0EDC2 /* NetworkTests */,
 				FFD662CC2437223100C0C3D6 /* Spotify_CloneTests.swift */,
-				FFA6713D243E605B002907BD /* StaticData.swift */,
 				FFD662CE2437223100C0C3D6 /* Info.plist */,
 			);
 			path = "Spotify-CloneTests";
@@ -680,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5270B124414D4F00C0EDC2 /* NetworkTests.swift in Sources */,
 				FFD662CD2437223100C0C3D6 /* Spotify_CloneTests.swift in Sources */,
 				FFA6713E243E605B002907BD /* StaticData.swift in Sources */,
 			);
@@ -770,7 +782,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -824,7 +836,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
