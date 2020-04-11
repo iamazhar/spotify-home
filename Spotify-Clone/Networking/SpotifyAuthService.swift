@@ -9,6 +9,7 @@
 import UIKit
 import SpotifyLogin
 
+/// Wrapper service class over SpotifyLogin.
 class SpotifyAuthService {
     
     public static let shared = SpotifyAuthService()
