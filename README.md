@@ -19,18 +19,17 @@ Carthage used
 ## Folder Structure and Architecture
 
 Each Module Will have its own folder. eg -
-Views
-View Models
-Design_System
-Animations
-Resources
-Extensions
-Controllers
-Common
-Networking
-Bridging-Header.h
-Frameworks (Folder for 3rd party code which does not have Cocoapods)
-AppDelegate.swift
-LaunchScreen.storyboard
-Info.plist
-##Git
+- Views
+- View Models
+- Design_System
+- Animations
+- Resources
+- Extensions
+- Controllers
+- Common
+- Networking
+- Bridging-Header.h
+- Frameworks (Folder for 3rd party code which does not have Cocoapods)
+- AppDelegate.swift
+- LaunchScreen.storyboard
+- Info.plist
