@@ -1,6 +1,6 @@
 # Spotify-Home :musical_note:
 
-:exclamation: You need to set up a client app on the [Spotify developer site] (https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class.
+:exclamation: You need to set up a client app on the [Spotify developer site](https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class.
 
 Project is a clone of the Spotify home screen UI with networking data from the Spotify Web API. The login is implemented using the official SpotifyLogin SDK. 
 
