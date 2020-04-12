@@ -1,4 +1,4 @@
-# Spotify-Clone
+# Spotify-Home
 Project is a clone of the Spotify home screen UI with networking data from the Spotify Web API. The login is implemented using the official SpotifyLogin SDK. 
 
 The purpose of the app is to implement a Desing System using design tokens, Objective C and Swift interoperability, and Unit tests. The Project includes the Sketch file that was used to design the UI. The code is documented using Jazzy docs, this can be found within /docs. 
