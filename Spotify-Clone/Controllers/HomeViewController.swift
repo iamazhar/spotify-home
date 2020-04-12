@@ -98,7 +98,6 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
             if let error = error {
                 print("Error Checking Access Token: ", error.localizedDescription)
             }
-            print(token ?? "")
             exists ? print(exists) : self?.showLoginFlow()
         }
     }
