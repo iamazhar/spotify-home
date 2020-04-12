@@ -14,9 +14,9 @@ class SpotifyAuthService {
     
     public static let shared = SpotifyAuthService()
     
-    private static let clientID = "4ff8e60b1da948e1af07650bde11ed97"
-    private static let clientSecret = "11af8f29c55a436fb7c5154813a7be81"
-    private static let redirectURL: URL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
+    private static let clientID = Client.id
+    private static let clientSecret = Client.secret
+    private static let redirectURL: URL = Client.redirectURL
     
     
     /// Private method that checks if the access token exists and completes with a Bool and optional Error object..
