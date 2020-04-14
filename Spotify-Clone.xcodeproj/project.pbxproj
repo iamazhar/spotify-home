@@ -20,6 +20,7 @@
 		FF651D5C24407A7900EDA138 /* HomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF651D5B24407A7900EDA138 /* HomeTableView.m */; };
 		FF651D632440816600EDA138 /* UIColor+BrandColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF651D612440816600EDA138 /* UIColor+BrandColors.m */; };
 		FF66B47D24390DE300832FB1 /* GridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */; };
+		FF72A60624458AA2007F770E /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF72A60524458AA2007F770E /* MediaItem.swift */; };
 		FF99D0EC243A0DCA0075A640 /* ItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EB243A0DCA0075A640 /* ItemImage.swift */; };
 		FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */; };
 		FFA6713E243E605B002907BD /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6713D243E605B002907BD /* StaticData.swift */; };
@@ -132,6 +133,7 @@
 		FF651D612440816600EDA138 /* UIColor+BrandColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BrandColors.m"; sourceTree = "<group>"; };
 		FF651D622440816600EDA138 /* UIColor+BrandColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BrandColors.h"; sourceTree = "<group>"; };
 		FF66B47C24390DE300832FB1 /* GridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTableViewCell.swift; sourceTree = "<group>"; };
+		FF72A60524458AA2007F770E /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		FF99D0EB243A0DCA0075A640 /* ItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImage.swift; sourceTree = "<group>"; };
 		FF99D0EE243A3BD80075A640 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		FFA6713D243E605B002907BD /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
@@ -301,6 +303,31 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		FF72A602244589CC007F770E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF72A60524458AA2007F770E /* MediaItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF72A603244589E6007F770E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				FF651D622440816600EDA138 /* UIColor+BrandColors.h */,
+				FF651D612440816600EDA138 /* UIColor+BrandColors.m */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		FF72A60424458A6E007F770E /* Text_Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FFB81639243899D600064E21 /* SPTBrandTypography.swift */,
+			);
+			path = Text_Styles;
+			sourceTree = "<group>";
+		};
 		FF99D0ED243A3BC50075A640 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,9 +368,9 @@
 		FFB81637243899B100064E21 /* Design_System */ = {
 			isa = PBXGroup;
 			children = (
-				FF651D622440816600EDA138 /* UIColor+BrandColors.h */,
-				FF651D612440816600EDA138 /* UIColor+BrandColors.m */,
-				FFB81639243899D600064E21 /* SPTBrandTypography.swift */,
+				FF72A60424458A6E007F770E /* Text_Styles */,
+				FF72A603244589E6007F770E /* Colors */,
+				FF72A602244589CC007F770E /* Components */,
 				FFDE462B243C835D00A12D8B /* SPTLayout.swift */,
 				FF5A5D25243C8CB200836FD3 /* SPTAnimationProperties.swift */,
 				FFB816432438CCC500064E21 /* Montserrat */,
@@ -678,6 +705,7 @@
 				FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */,
 				FFA929112437A29D0006F5CA /* Common.swift in Sources */,
 				FF99D0EF243A3BD80075A640 /* UIImage+Extensions.swift in Sources */,
+				FF72A60624458AA2007F770E /* MediaItem.swift in Sources */,
 				FFA929142437B0340006F5CA /* Album.swift in Sources */,
 				FF5CD92B243905B400AD0701 /* GridItemCollectionView.swift in Sources */,
 				FFD662B82437222D00C0C3D6 /* SceneDelegate.swift in Sources */,

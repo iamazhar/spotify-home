@@ -14,19 +14,21 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     var didScaleDownOnTouch = false
     
+    // MARK: - Data
+    
     public var cellType: SPTCarouselCellSize = .regular {
         didSet {
             NSLayoutConstraint.activate([
-                artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
+                mediaItem.artworkImageView.heightAnchor.constraint(equalToConstant: cellType.value.width),
             ])
-            artworkImageView.updateConstraints()
+                mediaItem.artworkImageView.updateConstraints()
         }
     }
 
     public var imagePath: String? {
         didSet {
             if let path = imagePath, let url = URL(string: path) {
-                artworkImageView.kf.setImage(with: url, options: [.transition(.fade(0.4))])
+                mediaItem.artworkImageView.kf.setImage(with: url, options: [.transition(.fade(0.4))])
             }
         }
     }
@@ -34,37 +36,18 @@ class ItemCollectionViewCell: UICollectionViewCell {
     public var itemTitle: String? {
         didSet {
             if let title = itemTitle {
-                self.itemLabel.text = title
-                self.itemLabel.sizeToFit()
+                mediaItem.itemLabel.text = title
+                mediaItem.itemLabel.sizeToFit()
             }
         }
     }
     
-    public let artworkImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        return iv
-    }()
+    // MARK: - Views
     
-    public let itemLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = "After Hours"
-        label.font = UIFont(name: SPTFont.recentlyPlayedTitle.value.fontName,
-                            size: SPTFont.recentlyPlayedTitle.value.fontSize)
-        label.textColor = SPTFont.recentlyPlayedTitle.value.textColor
-        return label
-    }()
-    
-    private let artworkStackView: UIStackView = {
-        let view = UIStackView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.spacing = 8.0
-        view.axis = .vertical
-        view.alignment = .leading
-        return view
+    let mediaItem: MediaItem = {
+        let mI = MediaItem(frame: .zero, mediaItemType: .carousel)
+        mI.translatesAutoresizingMaskIntoConstraints = false
+        return mI
     }()
     
     open override func prepareForReuse() {
@@ -79,17 +62,13 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     private func setupLayout() {
         self.contentView.backgroundColor = .clear
-        artworkStackView.addArrangedSubview(artworkImageView)
         
-        artworkStackView.addArrangedSubview(itemLabel)
-        
-        
-        addSubview(artworkStackView)
+        addSubview(mediaItem)
         NSLayoutConstraint.activate([
-            artworkStackView.topAnchor.constraint(equalTo: topAnchor),
-            artworkStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            artworkStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            artworkStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            mediaItem.topAnchor.constraint(equalTo: topAnchor),
+            mediaItem.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mediaItem.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mediaItem.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     

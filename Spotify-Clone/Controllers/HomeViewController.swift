@@ -142,7 +142,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridTableViewCell
             cell.sectionLabel.text = "Good evening"
-            cell.gridCollectionView.tracks = Array<Track>(itemsViewModel.tracks.prefix(6))
+            cell.gridCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 1:
             let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
