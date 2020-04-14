@@ -1,0 +1,3 @@
+github "spotify/SpotifyLogin"
+github "onevcat/Kingfisher" ~> 5.0
+git "git@github.com:iamazhar/AZEncore.git" ~> 1.0.1
