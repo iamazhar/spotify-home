@@ -276,13 +276,6 @@
 			path = NetworkTests;
 			sourceTree = "<group>";
 		};
-		FF5A5D22243C8C1D00836FD3 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
 		FF5CD927243904F600AD0701 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,7 +437,6 @@
 			children = (
 				FF5270AF24414C4000C0EDC2 /* Application */,
 				FF5270AE24414C1D00C0EDC2 /* Resources */,
-				FF5A5D22243C8C1D00836FD3 /* Animations */,
 				FF99D0ED243A3BC50075A640 /* Extensions */,
 				FFB81637243899B100064E21 /* Design_System */,
 				FFB816342438976600064E21 /* Views */,

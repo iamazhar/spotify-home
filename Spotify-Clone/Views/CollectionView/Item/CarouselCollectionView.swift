@@ -11,8 +11,21 @@ import UIKit
 /// Collection view for Carousel style section.
 class CarouselCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    public var tracks: [Track] = []
-    public var artists: [Artist] = []
+    public var tracks: [Track] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
+    }
+    
+    public var artists: [Artist] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
+    }
     
     public var cellType: SPTCarouselCellSize = .regular
     

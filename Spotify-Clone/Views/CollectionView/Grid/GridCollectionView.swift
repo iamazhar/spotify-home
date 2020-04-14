@@ -11,7 +11,13 @@ import UIKit
 /// Collection view for grid style section.
 class GridCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    public var tracks: [Track] = []
+    public var tracks: [Track] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
+    }
 
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
