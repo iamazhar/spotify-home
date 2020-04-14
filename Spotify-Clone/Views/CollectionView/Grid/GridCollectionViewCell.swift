@@ -1,5 +1,5 @@
 //
-//  GridItemCollectionViewCell.swift
+//  GridCollectionViewCell.swift
 //  Spotify-Clone
 //
 //  Created by Azhar Anwar on 4/4/20.
@@ -11,11 +11,9 @@ import Kingfisher
 
 /// Cell for grid style items.
 @objcMembers
-class GridItemCollectionViewCell: UICollectionViewCell {
+class GridCollectionViewCell: SPTItemCell {
     
-    var didScaleDownOnTouch = false
-    
-    // MARK: - Data
+    // MARK: - Properties
     public var imagePath: String? {
         didSet {
             if let path = imagePath, let url = URL(string: path) {
@@ -36,20 +34,23 @@ class GridItemCollectionViewCell: UICollectionViewCell {
     // MARK:- Views
     
     let mediaItemView: MediaItem = {
-        let mI = MediaItem(frame: .zero, mediaItemType: .grid)
-        mI.translatesAutoresizingMaskIntoConstraints = false
-        return mI
+        let mediaItem = MediaItem(frame: .zero, mediaItemType: .grid)
+        mediaItem.translatesAutoresizingMaskIntoConstraints = false
+        return mediaItem
     }()
     
-    // MARK: - Methods
-    
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
     }
     
-    private func setupLayout() {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
+    // MARK: - Methods
+    private func setupLayout() {
         addSubview(mediaItemView)
         NSLayoutConstraint.activate([
             mediaItemView.topAnchor.constraint(equalTo: topAnchor),
@@ -57,10 +58,6 @@ class GridItemCollectionViewCell: UICollectionViewCell {
             mediaItemView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mediaItemView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     

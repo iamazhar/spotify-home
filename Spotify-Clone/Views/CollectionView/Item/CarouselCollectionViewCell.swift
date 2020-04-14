@@ -1,5 +1,5 @@
 //
-//  TopItemCollectionViewCell.swift
+//  CarouselCollectionViewCell.swift
 //  Spotify-Clone
 //
 //  Created by Azhar Anwar on 4/4/20.
@@ -10,12 +10,9 @@ import UIKit
 import Kingfisher
 
 /// Collection view cell for carousel style item.
-class ItemCollectionViewCell: UICollectionViewCell {
+class CarouselCollectionViewCell: SPTItemCell {
     
-    var didScaleDownOnTouch = false
-    
-    // MARK: - Data
-    
+    // MARK: - Properties
     public var cellType: SPTCarouselCellSize = .regular {
         didSet {
             NSLayoutConstraint.activate([
@@ -43,21 +40,26 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Views
-    
     let mediaItem: MediaItem = {
-        let mI = MediaItem(frame: .zero, mediaItemType: .carousel)
-        mI.translatesAutoresizingMaskIntoConstraints = false
-        return mI
+        let mediaItem = MediaItem(frame: .zero, mediaItemType: .carousel)
+        mediaItem.translatesAutoresizingMaskIntoConstraints = false
+        return mediaItem
     }()
     
-    open override func prepareForReuse() {
-        super.prepareForReuse()
-        layoutIfNeeded()
-    }
-    
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Methods
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        layoutIfNeeded()
     }
     
     private func setupLayout() {
@@ -70,10 +72,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
             mediaItem.trailingAnchor.constraint(equalTo: trailingAnchor),
             mediaItem.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

@@ -145,19 +145,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.gridCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 1:
-            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.cellType = .small
             cell.backgroundColor = .red
             cell.sectionLabel.text = "Your top tracks"
             cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 2:
-            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top artists"
             cell.itemCollectionView.artists = itemsViewModel.artists
             return cell
         default:
-            let cell = ItemTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
             cell.sectionLabel.text = "Your top tracks"
             cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell

@@ -28,8 +28,8 @@ class GridTableViewCell: UITableViewCell {
         return label
     }()
     
-    var gridCollectionView: GridItemCollectionView = {
-        let cv = GridItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var gridCollectionView: GridCollectionView = {
+        let cv = GridCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()

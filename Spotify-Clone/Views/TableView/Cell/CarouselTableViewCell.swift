@@ -1,5 +1,5 @@
 //
-//  HomeTableViewCell.swift
+//  CarouselTableViewCell.swift
 //  Spotify-Clone
 //
 //  Created by Azhar Anwar on 4/4/20.
@@ -12,7 +12,7 @@ private var cellHeightAdjust: CGFloat = 30.0
 
 /// Table view cell for carousel style section.
 @objcMembers
-class ItemTableViewCell: UITableViewCell {
+class CarouselTableViewCell: UITableViewCell {
     
     public var cellType: SPTCarouselCellSize = .regular {
         didSet {
@@ -49,8 +49,8 @@ class ItemTableViewCell: UITableViewCell {
         return label
     }()
 
-    var itemCollectionView: ItemCollectionView = {
-        let cv = ItemCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var itemCollectionView: CarouselCollectionView = {
+        let cv = CarouselCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
