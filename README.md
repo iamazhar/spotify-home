@@ -30,7 +30,6 @@ Each Module Will have its own folder. eg -
 - Views
 - View Models
 - Design_System
-- Animations
 - Resources
 - Extensions
 - Controllers
