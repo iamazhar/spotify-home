@@ -22,7 +22,6 @@ Thrid party framewoks and Library are managed using Cocoapods.
 
 Carthage used
 - github "spotify/SpotifyLogin"
-- github "Alamofire/Alamofire" ~> 5.0
 - github "onevcat/Kingfisher" ~> 5.0
 
 ## Folder Structure and Architecture
