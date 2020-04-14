@@ -219,35 +219,35 @@
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/HomeViewController.swift",
-      "line": 136,
+      "line": 135,
       "symbol": "HomeViewController.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/HomeViewController.swift",
-      "line": 140,
+      "line": 139,
       "symbol": "HomeViewController.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/HomeViewController.swift",
-      "line": 169,
+      "line": 168,
       "symbol": "HomeViewController.tableView(_:heightForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/HomeViewController.swift",
-      "line": 181,
+      "line": 180,
       "symbol": "HomeViewController.tableView(_:willDisplay:forRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/HomeViewController.swift",
-      "line": 185,
+      "line": 184,
       "symbol": "HomeViewController.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -270,6 +270,48 @@
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controllers/LogInViewController.swift",
       "line": 45,
       "symbol": "LogInViewController.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 11,
+      "symbol": "MediaItemType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 12,
+      "symbol": "MediaItemType.carousel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 12,
+      "symbol": "MediaItemType.grid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 15,
+      "symbol": "MediaItem",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 58,
+      "symbol": "MediaItem.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Components/MediaItem.swift",
+      "line": 72,
+      "symbol": "MediaItem.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -312,62 +354,6 @@
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTAnimationProperties.swift",
       "line": 20,
       "symbol": "SPTAnimationPressCellProperty.value",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 12,
-      "symbol": "BrandStyle.fontName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 13,
-      "symbol": "BrandStyle.fontSize",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 14,
-      "symbol": "BrandStyle.textColor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 16,
-      "symbol": "BrandStyle.init(name:size:color:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 23,
-      "symbol": "SPTFont",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 25,
-      "symbol": "SPTFont.recentlyPlayedTitle",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 26,
-      "symbol": "SPTFont.homeSectionTitle",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTBrandTypography.swift",
-      "line": 28,
-      "symbol": "SPTFont.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -494,6 +480,62 @@
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/SPTLayout.swift",
       "line": 92,
       "symbol": "SPTArtworkRectSize.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 12,
+      "symbol": "BrandStyle.fontName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 13,
+      "symbol": "BrandStyle.fontSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 14,
+      "symbol": "BrandStyle.textColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 16,
+      "symbol": "BrandStyle.init(name:size:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 23,
+      "symbol": "SPTFont",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 25,
+      "symbol": "SPTFont.recentlyPlayedTitle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 26,
+      "symbol": "SPTFont.homeSectionTitle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design_System/Text_Styles/SPTBrandTypography.swift",
+      "line": 28,
+      "symbol": "SPTFont.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -649,6 +691,34 @@
       "line": 21,
       "symbol": "Track.init(id:album:name:artists:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Networking/Extensions/Client.swift",
+      "line": 11,
+      "symbol": "Client",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Networking/Extensions/Client.swift",
+      "line": 12,
+      "symbol": "Client.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Networking/Extensions/Client.swift",
+      "line": 13,
+      "symbol": "Client.secret",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Networking/Extensions/Client.swift",
+      "line": 14,
+      "symbol": "Client.redirectURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -814,28 +884,28 @@
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionView.swift",
-      "line": 39,
+      "line": 40,
       "symbol": "GridItemCollectionView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionView.swift",
-      "line": 43,
+      "line": 44,
       "symbol": "GridItemCollectionView.collectionView(_:numberOfItemsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionView.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "GridItemCollectionView.collectionView(_:cellForItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionView.swift",
-      "line": 55,
+      "line": 56,
       "symbol": "GridItemCollectionView.collectionView(_:layout:sizeForItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -863,28 +933,21 @@
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionViewCell.swift",
-      "line": 55,
-      "symbol": "GridItemCollectionViewCell.artworkImageView",
+      "line": 38,
+      "symbol": "GridItemCollectionViewCell.mediaItemView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionViewCell.swift",
-      "line": 63,
-      "symbol": "GridItemCollectionViewCell.itemLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionViewCell.swift",
-      "line": 76,
+      "line": 46,
       "symbol": "GridItemCollectionViewCell.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Grid/GridItemCollectionViewCell.swift",
-      "line": 107,
+      "line": 62,
       "symbol": "GridItemCollectionViewCell.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -954,56 +1017,49 @@
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 17,
+      "line": 19,
       "symbol": "ItemCollectionViewCell.cellType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "ItemCollectionViewCell.imagePath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 34,
+      "line": 36,
       "symbol": "ItemCollectionViewCell.itemTitle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 43,
-      "symbol": "ItemCollectionViewCell.artworkImageView",
+      "line": 47,
+      "symbol": "ItemCollectionViewCell.mediaItem",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 51,
-      "symbol": "ItemCollectionViewCell.itemLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 70,
+      "line": 53,
       "symbol": "ItemCollectionViewCell.prepareForReuse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 75,
+      "line": 58,
       "symbol": "ItemCollectionViewCell.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Views/CollectionView/Item/ItemCollectionViewCell.swift",
-      "line": 96,
+      "line": 75,
       "symbol": "ItemCollectionViewCell.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
