@@ -1,0 +1,278 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 14,
+      "symbol": "ItemCollectionViewCell.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 20,
+      "symbol": "ItemCollectionViewCell.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 24,
+      "symbol": "ItemCollectionViewCell.touchesCancelled(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 29,
+      "symbol": "ItemCollectionViewCell.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 34,
+      "symbol": "ItemCollectionViewCell.setTouchDownState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 48,
+      "symbol": "ItemCollectionViewCell.setTouchUpStateWithAnimation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 66,
+      "symbol": "GridItemCollectionViewCell.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 72,
+      "symbol": "GridItemCollectionViewCell.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 76,
+      "symbol": "GridItemCollectionViewCell.touchesCancelled(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 81,
+      "symbol": "GridItemCollectionViewCell.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 86,
+      "symbol": "GridItemCollectionViewCell.setTouchDownState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Animation/SPTPressCell.swift",
+      "line": 100,
+      "symbol": "GridItemCollectionViewCell.setTouchUpStateWithAnimation()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controller/HomeViewController.swift",
+      "line": 136,
+      "symbol": "HomeViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controller/HomeViewController.swift",
+      "line": 140,
+      "symbol": "HomeViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controller/HomeViewController.swift",
+      "line": 169,
+      "symbol": "HomeViewController.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controller/HomeViewController.swift",
+      "line": 181,
+      "symbol": "HomeViewController.tableView(_:willDisplay:forRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Controller/HomeViewController.swift",
+      "line": 185,
+      "symbol": "HomeViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTAnimationProperties.swift",
+      "line": 14,
+      "symbol": "SPTAnimationPressCellProperty.touchDownDuration",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTAnimationProperties.swift",
+      "line": 15,
+      "symbol": "SPTAnimationPressCellProperty.touchDownScale",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTAnimationProperties.swift",
+      "line": 16,
+      "symbol": "SPTAnimationPressCellProperty.delay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTAnimationProperties.swift",
+      "line": 17,
+      "symbol": "SPTAnimationPressCellProperty.damping",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTAnimationProperties.swift",
+      "line": 18,
+      "symbol": "SPTAnimationPressCellProperty.velocity",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 13,
+      "symbol": "SPTHomeSectionHeight.grid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 13,
+      "symbol": "SPTHomeSectionHeight.itemRegular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 13,
+      "symbol": "SPTHomeSectionHeight.itemSmall",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 29,
+      "symbol": "SPTCarouselCellSize.regular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 29,
+      "symbol": "SPTCarouselCellSize.small",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 43,
+      "symbol": "SPTGridCellSize.regular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 55,
+      "symbol": "SPTMinimumCellSpacing.interItem",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 55,
+      "symbol": "SPTMinimumCellSpacing.lineSpacing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 69,
+      "symbol": "SPTInsets.grid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 69,
+      "symbol": "SPTInsets.homeTableView",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 69,
+      "symbol": "SPTInsets.item",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Design System/SPTLayout.swift",
+      "line": 91,
+      "symbol": "SPTArtworkRectSize.grid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Extension/UIImage+Extensions.swift",
+      "line": 12,
+      "symbol": "UIImage.tinted(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Extension/URLSession+Extensions.swift",
+      "line": 18,
+      "symbol": "URLSession.Handler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Extension/URLSession+Extensions.swift",
+      "line": 20,
+      "symbol": "URLSession.performRequest(for:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Service/SpotifyWebAPIService.swift",
+      "line": 14,
+      "symbol": "ItemType.artists",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone/Spotify-Clone/Service/SpotifyWebAPIService.swift",
+      "line": 14,
+      "symbol": "ItemType.tracks",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/azharanwar/Documents/XcodeProjects/Spotify-Clone"
+}

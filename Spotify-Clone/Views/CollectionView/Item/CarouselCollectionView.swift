@@ -1,5 +1,5 @@
 //
-//  GridItemCollectionView.swift
+//  CarouselCollectionView.swift
 //  Spotify-Clone
 //
 //  Created by Azhar Anwar on 4/4/20.
@@ -8,53 +8,70 @@
 
 import UIKit
 
-/// Collection view for grid style section.
-class GridItemCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+/// Collection view for Carousel style section.
+class CarouselCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var tracks: [Track] = []
-
+    public var artists: [Artist] = []
+    
+    public var cellType: SPTCarouselCellSize = .regular
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
-        showsVerticalScrollIndicator = false
         dataSource = self
         delegate = self
         
-        register(GridItemCollectionViewCell.self, forCellWithReuseIdentifier:  Common.gridItemReuseIdentifier)
+        register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: Common.itemReuseIdentifier)
         
         setupLayout()
+        
     }
     
-    private func setupLayout() {
+    fileprivate func setupLayout() {
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = SPTInsets.grid.value
+        layout.sectionInset = SPTInsets.item.value
         layout.minimumLineSpacing = SPTMinimumCellSpacing.lineSpacing.value
-        layout.minimumInteritemSpacing = SPTMinimumCellSpacing.interItem.value
+        layout.scrollDirection = .horizontal
         collectionViewLayout = layout
         showsHorizontalScrollIndicator = false
         reloadData()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        print("Fatal error: required init not implemented")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if tracks.isEmpty {
+            return artists.count
+        }
         return tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridItemCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Common.itemReuseIdentifier, for: indexPath) as! CarouselCollectionViewCell
+        
+        if tracks.isEmpty {
+            let imagePath = artists[indexPath.item].images?[1].url
+            cell.imagePath = imagePath
+            cell.cellType = cellType
+            cell.itemTitle = artists[indexPath.item].name
+            return cell
+        }
+        
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
+        cell.cellType = cellType
         cell.itemTitle = tracks[indexPath.item].name
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return SPTGridCellSize.regular.value
+        return cellType.value
     }
     
 }

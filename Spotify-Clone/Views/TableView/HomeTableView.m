@@ -20,7 +20,7 @@
         [self setContentInset:UIEdgeInsetsMake(15.0, 0.0, 0.0, 0.0)];
         [self setShowsVerticalScrollIndicator:NO];
         
-        [self registerClass:ItemTableViewCell.self forCellReuseIdentifier: Common.itemReuseIdentifier];
+        [self registerClass:CarouselTableViewCell.self forCellReuseIdentifier: Common.itemReuseIdentifier];
         [self registerClass:GridTableViewCell.self forCellReuseIdentifier: Common.gridItemReuseIdentifier];
     }
     return self;
