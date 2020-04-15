@@ -52,14 +52,8 @@ class GridCollectionViewCell: SPTItemCell {
     // MARK: - Methods
     private func setupLayout() {
         addSubview(mediaItemView)
-        NSLayoutConstraint.activate([
-            mediaItemView.topAnchor.constraint(equalTo: topAnchor),
-            mediaItemView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            mediaItemView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mediaItemView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        mediaItemView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
-    
     
 }
 

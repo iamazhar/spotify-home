@@ -46,20 +46,10 @@ class GridTableViewCell: UITableViewCell {
         containerStackView.addArrangedSubview(sectionLabel)
         containerStackView.addArrangedSubview(gridCollectionView)
         
-        NSLayoutConstraint.activate([
-            gridCollectionView.heightAnchor.constraint(equalToConstant: 184),
-            gridCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
-            gridCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
-        ])
+        gridCollectionView.anchor(top: nil, leading: containerStackView.leadingAnchor, bottom: nil, trailing: containerStackView.trailingAnchor, size: .init(width: .zero, height: 184))
         
         addSubview(containerStackView)
-        NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
-            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-    
+        containerStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 15, bottom: 0, right: 15))
     }
     
     required init?(coder: NSCoder) {

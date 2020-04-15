@@ -19,7 +19,6 @@ class MediaItem: UIView {
     /// Artwork image
     public let artworkImageView: UIImageView = {
         let iv = UIImageView()
-        iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
@@ -42,14 +41,12 @@ class MediaItem: UIView {
         view.backgroundColor = UIColor().bgGridCell()
         view.layer.cornerRadius = 3.0
         view.clipsToBounds = true
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     /// Container stack view
     private let containerStackView: UIStackView = {
         let view = UIStackView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -88,11 +85,8 @@ class MediaItem: UIView {
             containerStackView.addArrangedSubview(itemLabel)
             
             addSubview(containerStackView)
-            NSLayoutConstraint.activate([
-                containerStackView.topAnchor.constraint(equalTo: topAnchor),
-                containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)])
+            containerStackView.fillSuperview()
+            
         case .grid:
             // stack view props setup
             containerStackView.spacing = 8.0
@@ -101,28 +95,15 @@ class MediaItem: UIView {
             
             // add views
             containerStackView.addArrangedSubview(artworkImageView)
-            NSLayoutConstraint.activate([
-                artworkImageView.heightAnchor.constraint(equalToConstant: SPTArtworkRectSize.grid.value),
-                artworkImageView.widthAnchor.constraint(equalToConstant: SPTArtworkRectSize.grid.value)
-            ])
+            artworkImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: SPTArtworkRectSize.grid.value, height: SPTArtworkRectSize.grid.value))
             
             containerStackView.addArrangedSubview(itemLabel)
             
             containerBgView.addSubview(containerStackView)
-            NSLayoutConstraint.activate([
-                containerStackView.topAnchor.constraint(equalTo: containerBgView.topAnchor),
-                containerStackView.bottomAnchor.constraint(equalTo: containerBgView.bottomAnchor),
-                containerStackView.leadingAnchor.constraint(equalTo: containerBgView.leadingAnchor),
-                containerStackView.trailingAnchor.constraint(equalTo: containerBgView.trailingAnchor)
-            ])
+            containerStackView.fillSuperview()
             
             addSubview(containerBgView)
-            NSLayoutConstraint.activate([
-                containerBgView.topAnchor.constraint(equalTo: topAnchor),
-                containerBgView.bottomAnchor.constraint(equalTo: bottomAnchor),
-                containerBgView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                containerBgView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0)
-            ])
+            containerBgView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 5), size: .zero)
         }
     }
     

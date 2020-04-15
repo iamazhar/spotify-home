@@ -65,12 +65,10 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
         
         // add and constrain tableView
         view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        tableView.anchor(top: view.topAnchor,
+                         leading: view.leadingAnchor,
+                         bottom: view.bottomAnchor,
+                         trailing: view.trailingAnchor)
         
         checkAccessToken()
         
@@ -118,12 +116,13 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
         // add and constraint signOutButton
         guard let navController = navigationController else { return }
         navController.navigationBar.addSubview(signOutButton)
-        NSLayoutConstraint.activate([
-            signOutButton.bottomAnchor.constraint(equalTo: navController.navigationBar.bottomAnchor, constant: 0),
-            signOutButton.trailingAnchor.constraint(equalTo: navController.navigationBar.trailingAnchor, constant: -15),
-            signOutButton.widthAnchor.constraint(equalToConstant: 48),
-            signOutButton.heightAnchor.constraint(equalToConstant: 48)
-        ])
+        
+        signOutButton.anchor(top: nil,
+                             leading: nil,
+                             bottom: navController.navigationBar.bottomAnchor,
+                             trailing: navController.navigationBar.trailingAnchor,
+                             padding: .init(top: 0, left: 0, bottom: 0, right: 15),
+                             size: .init(width: 48, height: 48))
     }
     
     
