@@ -8,7 +8,10 @@ Project is a clone of the Spotify home screen UI with networking data from the S
 
 The purpose of the app is to implement a Desing System using design tokens, Objective C and Swift interoperability, and Unit tests. The Project includes the Sketch file that was used to design the UI. The code is documented using Jazzy docs, this can be found within /docs. 
 
-![Spotify-Preview-Gif](spt-clone-preview.gif)
+<p align="center">
+  <img width="460" height="300" src="spt-clone-preview.gif">
+</p>
+
 
 ## Documentation
 #### 21% documented, in progress
