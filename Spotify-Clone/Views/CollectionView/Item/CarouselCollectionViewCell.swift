@@ -66,12 +66,7 @@ class CarouselCollectionViewCell: SPTItemCell {
         self.contentView.backgroundColor = .clear
         
         addSubview(mediaItem)
-        NSLayoutConstraint.activate([
-            mediaItem.topAnchor.constraint(equalTo: topAnchor),
-            mediaItem.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mediaItem.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mediaItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-        ])
+        mediaItem.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
     
 }

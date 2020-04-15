@@ -72,19 +72,11 @@ class CarouselTableViewCell: UITableViewCell {
         containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
         containerStackView.addArrangedSubview(labelStackView)
         containerStackView.addArrangedSubview(itemCollectionView)
-        NSLayoutConstraint.activate([
-            itemCollectionView.leadingAnchor.constraint(equalTo: containerStackView.leadingAnchor),
-            itemCollectionView.trailingAnchor.constraint(equalTo: containerStackView.trailingAnchor)
-        ])
+        itemCollectionView.anchor(top: nil, leading: containerStackView.leadingAnchor, bottom: nil, trailing: containerStackView.trailingAnchor)
         
         // add to view
         addSubview(containerStackView)
-        NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
-            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        containerStackView.fillSuperview()
     }
     
     required init?(coder: NSCoder) {
