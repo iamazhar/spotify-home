@@ -1,8 +1,6 @@
-<p align="center>
-   <img width="200" src="app-icon.png" />
-</p>
-
 <p align="center">
+  <img width="100" src="app-icon.png" />
+   <br>
   <h1 align = "center">Spotify Home</h1>
 </p>
 
