@@ -11,7 +11,7 @@
 
 :exclamation: You need to set up a client app on the [Spotify developer site](https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class. Check the [SpotifyLogin github page](https://github.com/spotify/SpotifyLogin) for detailed steps on how to set this up.
 
-Project is a clone of the Spotify home screen UI with networking data from the Spotify Web API. The login is implemented using the official SpotifyLogin SDK. 
+The project is a clone of the Spotify home screen UI with networking data from the Spotify Web API. The login feature is implemented using the official SpotifyLogin SDK. 
 
 The purpose of the app is to implement a Desing System using design tokens, Objective C and Swift interoperability, and Unit tests. The Project includes the Sketch file that was used to design the UI. The code is documented using Jazzy docs, this can be found within `/docs`. 
 
