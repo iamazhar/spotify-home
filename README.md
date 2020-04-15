@@ -1,7 +1,12 @@
 <p align="center">
-  <h1>Spotify-Home</h1>
-  <br><br>
-  <img src="https://img.shields.io/badge/Swift-5.1-blue">
+  <h1 align = "center">Spotify-Home</h1>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Swift-5.1-brightgreen.svg" />
+    <a href="https://twitter.com/azhar_dev">
+        <img src="https://img.shields.io/badge/Contact-%40azhar__dev-blue" alt="Twitter: @azhar_dev" />
+    </a>
 </p>
 
 :exclamation: You need to set up a client app on the [Spotify developer site](https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class. Check the [SpotifyLogin github page](https://github.com/spotify/SpotifyLogin) for detailed steps on how to set this up.
