@@ -32,7 +32,7 @@ Code follows Raywenderlich style guide.
 
 ## Dependencies
 
-Thrid party framewoks and Library are managed using Carthage.
+Thrid party frameworks and library are managed using Carthage.
 
 Carthage frameworks used
 - github "spotify/SpotifyLogin"
@@ -40,7 +40,7 @@ Carthage frameworks used
 
 ## Folder Structure and Architecture
 
-Each Module Will have its own folder. eg -
+Each module will have its own folder. eg -
 - Views
 - View Models
 - Design_System
