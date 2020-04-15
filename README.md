@@ -32,9 +32,9 @@ Code follows Raywenderlich style guide.
 
 ## Dependencies
 
-Thrid party framewoks and Library are managed using Cocoapods.
+Thrid party framewoks and Library are managed using Carthage.
 
-Carthage used
+Carthage frameworks used
 - github "spotify/SpotifyLogin"
 - github "onevcat/Kingfisher" ~> 5.0
 
