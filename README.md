@@ -1,6 +1,6 @@
 # Spotify-Home :musical_note:
 
-https://img.shields.io/badge/Swift-5.1-blue
+(https://img.shields.io/badge/Swift-5.1-blue)
 
 :exclamation: You need to set up a client app on the [Spotify developer site](https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class. Check the [SpotifyLogin github page](https://github.com/spotify/SpotifyLogin) for detailed steps on how to set this up.
 
