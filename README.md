@@ -28,11 +28,11 @@ The purpose of the app is to implement a Desing System using design tokens, Obje
 
 ## Swift Style Guide
 
-Code follows Raywenderlich style guide.
+Code follows the [Raywenderlich style guide](https://github.com/raywenderlich/swift-style-guide).
 
 ## Dependencies
 
-Thrid party frameworks and library are managed using Carthage.
+Carthage dependencies have been included in the repo for convenience. You can add them to your .gitignore to not include them in your fork
 
 Carthage frameworks used
 - github "spotify/SpotifyLogin"
@@ -40,7 +40,7 @@ Carthage frameworks used
 
 ## Folder Structure and Architecture
 
-Each module will have its own folder. eg -
+Each module will have its folder. eg -
 - Views
 - View Models
 - Design_System
