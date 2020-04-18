@@ -26,7 +26,7 @@ class GridCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
         dataSource = self
         delegate = self
         
-        register(GridCollectionViewCell.self, forCellWithReuseIdentifier:  Common.gridItemReuseIdentifier)
+        register(GridCollectionViewCell.self, forCellWithReuseIdentifier:  Constant.gridItemReuseIdentifier)
         
         setupLayout()
     }
@@ -52,7 +52,7 @@ class GridCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Constant.gridItemReuseIdentifier, for: indexPath) as! GridCollectionViewCell
         let imagePath = tracks[indexPath.item].album.images[1].url
         cell.imagePath = imagePath
         cell.itemTitle = tracks[indexPath.item].name

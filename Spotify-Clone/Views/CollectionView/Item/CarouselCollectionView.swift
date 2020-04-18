@@ -35,7 +35,7 @@ class CarouselCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         dataSource = self
         delegate = self
         
-        register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: Common.itemReuseIdentifier)
+        register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: Constant.itemReuseIdentifier)
         
         setupLayout()
         
@@ -45,7 +45,7 @@ class CarouselCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
         self.backgroundColor = .clear
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = SPTInsets.item.value
+        layout.sectionInset = SPTInsets.carousel.value
         layout.minimumLineSpacing = SPTMinimumCellSpacing.lineSpacing.value
         layout.scrollDirection = .horizontal
         collectionViewLayout = layout
@@ -66,7 +66,7 @@ class CarouselCollectionView: UICollectionView, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: Common.itemReuseIdentifier, for: indexPath) as! CarouselCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: Constant.itemReuseIdentifier, for: indexPath) as! CarouselCollectionViewCell
         
         if tracks.isEmpty {
             let imagePath = artists[indexPath.item].images?[1].url

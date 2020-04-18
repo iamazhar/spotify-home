@@ -33,8 +33,8 @@ class GridCollectionViewCell: SPTItemCell {
     
     // MARK:- Views
     
-    let mediaItemView: MediaItem = {
-        let mediaItem = MediaItem(frame: .zero, mediaItemType: .grid)
+    let mediaItemView: MediaItemView = {
+        let mediaItem = MediaItemView(frame: .zero, mediaItemType: .grid)
         mediaItem.translatesAutoresizingMaskIntoConstraints = false
         return mediaItem
     }()

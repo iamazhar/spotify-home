@@ -41,7 +41,7 @@ class GridTableViewCell: UITableViewCell {
     }
     
     fileprivate func setupLayout() {
-        self.contentView.backgroundColor = .clear
+        self.backgroundColor = .clear
         
         containerStackView.addArrangedSubview(sectionLabel)
         containerStackView.addArrangedSubview(gridCollectionView)

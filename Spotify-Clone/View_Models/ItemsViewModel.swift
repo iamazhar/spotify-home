@@ -31,7 +31,7 @@ public class ItemsViewModel {
     
     /// Fetch user's top Tracks data from SpotifyWebAPIService.
     func getTracks() {
-        sptWebAPIService.sptUserTop(itemType: .tracks, count: 10) { [weak self] (tracks, _, error) in
+        sptWebAPIService.sptUserTop(itemType: .tracks, count: Config.apiDataCount) { [weak self] (tracks, _, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
@@ -40,15 +40,13 @@ public class ItemsViewModel {
             
             guard let userTracks = tracks else { return }
             strongSelf.tracks = userTracks
-            DispatchQueue.main.async {
-                strongSelf.delegate?.didReceiveItemData()
-            }
+            strongSelf.delegate?.didReceiveItemData()
         }
     }
     
     /// Fetch user's top Artists data from SpotifyWebAPIService.
     func getArtists() {
-        sptWebAPIService.sptUserTop(itemType: .artists, count: 10) { [weak self] (_, artists, error) in
+        sptWebAPIService.sptUserTop(itemType: .artists, count: Config.apiDataCount) { [weak self] (_, artists, error) in
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Error: ", error)
@@ -57,10 +55,7 @@ public class ItemsViewModel {
             
             guard let userArtists = artists else { return }
             strongSelf.artists = userArtists
-            DispatchQueue.main.async {
-                strongSelf.delegate?.didReceiveItemData()
-            }
-            
+            strongSelf.delegate?.didReceiveItemData()
         }
     }
     

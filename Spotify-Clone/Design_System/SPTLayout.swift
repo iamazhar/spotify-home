@@ -25,7 +25,7 @@ public enum SPTHomeSectionHeight: CGFloat {
 }
 
 /// Size of each item in a carousel style section.
-public enum SPTCarouselCellSize: String {
+@objc public enum SPTCarouselCellSize: Int {
     case small, regular
     
     var value: CGSize {
@@ -51,7 +51,7 @@ public enum SPTGridCellSize: String {
 }
 
 /// Minimum spacing between each item in a section.
-public enum SPTMinimumCellSpacing: CGFloat {
+@objc public enum SPTMinimumCellSpacing: Int {
     case lineSpacing, interItem
     
     var value: CGFloat {
@@ -65,12 +65,12 @@ public enum SPTMinimumCellSpacing: CGFloat {
 }
 
 /// Insets for the contents of a section.
-public enum SPTInsets: CGFloat {
-    case item, grid, homeTableView
+@objc public enum SPTInsets: Int {
+    case carousel, grid, homeTableView
     
     var value: UIEdgeInsets {
         switch self {
-        case .item:
+        case .carousel:
             return UIEdgeInsets(top: 0,
                                 left: 15.0,
                                 bottom: 15.0,

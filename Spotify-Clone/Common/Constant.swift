@@ -9,8 +9,9 @@
 import Foundation
 
 @objcMembers
-class Common: NSObject {
+class Constant: NSObject {
     /// Reuse identifiers
     static let itemReuseIdentifier = "item-cell"
     static let gridItemReuseIdentifier = "grid-cell"
+    static let signOutButtonSize: CGFloat = 48.0
 }
