@@ -24,7 +24,7 @@ The purpose of the app is to implement a Desing System using design tokens, Obje
 
 ## Documentation
 #### 21% documented, in progress
-[Spotify-Home Documentation](https://iamazhar.github.io/Spotify-Home/)
+[Spotify-Home Documentation](https://iamazhar.github.io/spotify-home/)
 
 ## Swift Style Guide
 
