@@ -62,14 +62,14 @@ class CarouselTableViewCell: UITableViewCell {
     }
     
     fileprivate func setupLayout() {
-        self.contentView.backgroundColor = .clear
+        self.backgroundColor = .clear
         
         // section label stack view
         labelStackView.addArrangedSubview(UIView())
         labelStackView.addArrangedSubview(sectionLabel)
     
         // container stack view
-        containerStackView.addArrangedSubview(UIView(frame: CGRect(origin: .zero, size: .init(width: frame.width, height: 15.0))))
+        containerStackView.addArrangedSubview(UIView())
         containerStackView.addArrangedSubview(labelStackView)
         containerStackView.addArrangedSubview(itemCollectionView)
         itemCollectionView.anchor(top: nil, leading: containerStackView.leadingAnchor, bottom: nil, trailing: containerStackView.trailingAnchor)

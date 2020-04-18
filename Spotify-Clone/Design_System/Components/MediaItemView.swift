@@ -12,7 +12,7 @@ enum MediaItemType: String {
     case carousel, grid
 }
 
-class MediaItem: UIView {
+class MediaItemView: UIView {
     
     // MARK: - Views
     

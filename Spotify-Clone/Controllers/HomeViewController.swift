@@ -122,7 +122,7 @@ class HomeViewController: UIViewController, ItemsViewModelDelegate {
                              bottom: navController.navigationBar.bottomAnchor,
                              trailing: navController.navigationBar.trailingAnchor,
                              padding: .init(top: 0, left: 0, bottom: 0, right: 15),
-                             size: .init(width: 48, height: 48))
+                             size: .init(width: Constant.signOutButtonSize, height: Constant.signOutButtonSize))
     }
     
     
@@ -139,24 +139,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Common.gridItemReuseIdentifier, for: indexPath) as! GridTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.gridItemReuseIdentifier, for: indexPath) as! GridTableViewCell
             cell.sectionLabel.text = "Good evening"
             cell.gridCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 1:
-            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.itemReuseIdentifier, for: indexPath) as! CarouselTableViewCell
             cell.cellType = .small
-            cell.backgroundColor = .red
             cell.sectionLabel.text = "Your top tracks"
             cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell
         case 2:
-            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.itemReuseIdentifier, for: indexPath) as! CarouselTableViewCell
             cell.sectionLabel.text = "Your top artists"
             cell.itemCollectionView.artists = itemsViewModel.artists
             return cell
         default:
-            let cell = CarouselTableViewCell.init(style: .default, reuseIdentifier: Common.itemReuseIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.itemReuseIdentifier, for: indexPath) as! CarouselTableViewCell
             cell.sectionLabel.text = "Your top tracks"
             cell.itemCollectionView.tracks = itemsViewModel.tracks
             return cell
@@ -176,15 +175,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = .clear
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.selectionStyle = .none
     }
-    
 }
 
 // MARK: - View model delegate method

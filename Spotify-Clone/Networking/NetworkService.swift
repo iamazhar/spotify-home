@@ -46,4 +46,12 @@ class NetworkService {
             completion(data, nil)
         }
     }
+    
+    static func addSPTHeaders(to request: inout URLRequest, with token: String) {
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    }
 }
+
+

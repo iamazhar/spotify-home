@@ -19,9 +19,10 @@
         [self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [self setContentInset:UIEdgeInsetsMake(15.0, 0.0, 0.0, 0.0)];
         [self setShowsVerticalScrollIndicator:NO];
+        [self setBackgroundColor:UIColor.clearColor];
         
-        [self registerClass:CarouselTableViewCell.self forCellReuseIdentifier: Common.itemReuseIdentifier];
-        [self registerClass:GridTableViewCell.self forCellReuseIdentifier: Common.gridItemReuseIdentifier];
+        [self registerClass:CarouselTableViewCell.self forCellReuseIdentifier: Constant.itemReuseIdentifier];
+        [self registerClass:GridTableViewCell.self forCellReuseIdentifier: Constant.gridItemReuseIdentifier];
     }
     return self;
 }

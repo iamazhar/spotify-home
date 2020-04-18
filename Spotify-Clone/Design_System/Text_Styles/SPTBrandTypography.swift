@@ -28,9 +28,9 @@ enum SPTFont: String {
     var value: BrandStyle {
         switch self {
         case .recentlyPlayedTitle:
-            return BrandStyle(name: "Montserrat-SemiBold", size: 11, color: UIColor.white)
+            return BrandStyle(name: SPTConstant.montserratSemiBold, size: 11, color: UIColor.white)
         case .homeSectionTitle:
-            return BrandStyle(name: "Montserrat-Bold", size: 20, color: UIColor.white)
+            return BrandStyle(name: SPTConstant.montserratBold, size: 20, color: UIColor.white)
         }
     }
 }

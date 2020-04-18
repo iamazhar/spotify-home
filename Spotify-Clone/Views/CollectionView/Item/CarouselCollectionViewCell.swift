@@ -40,8 +40,8 @@ class CarouselCollectionViewCell: SPTItemCell {
     }
     
     // MARK: - Views
-    let mediaItem: MediaItem = {
-        let mediaItem = MediaItem(frame: .zero, mediaItemType: .carousel)
+    let mediaItem: MediaItemView = {
+        let mediaItem = MediaItemView(frame: .zero, mediaItemType: .carousel)
         mediaItem.translatesAutoresizingMaskIntoConstraints = false
         return mediaItem
     }()

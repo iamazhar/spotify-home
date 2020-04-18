@@ -47,9 +47,13 @@ class SpotifyWebAPIService {
             
             switch itemType {
             case .artists:
-                completion(nil, artists, nil)
+                DispatchQueue.main.async {
+                    completion(nil, artists, nil)
+                }
             case .tracks:
-                completion(tracks, nil, nil)
+                DispatchQueue.main.async {
+                    completion(tracks, nil, nil)
+                }
             }
         }
     }
@@ -75,9 +79,7 @@ extension SpotifyWebAPIService {
             guard let url = URL(string: "\(strongSelf.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=\(count)&offset=5") else { return }
             
             var request = URLRequest(url: url)
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue("Bearer \(token ?? "")", forHTTPHeaderField: "Authorization")
+            NetworkService.addSPTHeaders(to: &request, with: token ?? "")
             
             strongSelf.networkService.networkCall(request) { (data, error) in
                 if let error = error {
