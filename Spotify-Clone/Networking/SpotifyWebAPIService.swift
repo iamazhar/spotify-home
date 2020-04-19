@@ -73,7 +73,6 @@ extension SpotifyWebAPIService {
             if let error = error {
                 print("Failed to get access token", error)
                 completion(nil, nil, error)
-                return
             }
             
             guard let url = URL(string: "\(strongSelf.baseUrl)/top/\(itemType.value)?time_range=medium_term&limit=\(count)&offset=5") else { return }
@@ -84,7 +83,7 @@ extension SpotifyWebAPIService {
             strongSelf.networkService.networkCall(request) { (data, error) in
                 if let error = error {
                     print("Network call failed: ", error)
-                    return
+                    completion(nil, nil, error)
                 }
                 
                 guard let receivedData = data else { return }
