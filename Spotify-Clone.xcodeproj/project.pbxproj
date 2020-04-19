@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FF106FE92437879A00723D3F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FE82437879A00723D3F /* LogInViewController.swift */; };
-		FF106FEB2437937200723D3F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; };
-		FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF106FEA2437937200723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF106FED243793A800723D3F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF106FF22437958D00723D3F /* SpotifyAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106FF12437958D00723D3F /* SpotifyAuthService.swift */; };
 		FF13CAEC244B40EA00E99A5B /* SPTConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF13CAEB244B40EA00E99A5B /* SPTConstant.swift */; };
 		FF5270B124414D4F00C0EDC2 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5270B024414D4F00C0EDC2 /* NetworkTests.swift */; };
@@ -86,7 +83,6 @@
 			files = (
 				FFBD70C62437835400E6AD9A /* SpotifyLogin.framework in Embed Frameworks */,
 				FFB816402438A9CD00064E21 /* Kingfisher.framework in Embed Frameworks */,
-				FF106FEC2437937200723D3F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +95,6 @@
 			files = (
 				FFBD70CB2437847D00E6AD9A /* SpotifyLogin.framework in CopyFiles */,
 				FFB816422438A9E700064E21 /* Kingfisher.framework in CopyFiles */,
-				FF106FEE243793A800723D3F /* Alamofire.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +102,6 @@
 
 /* Begin PBXFileReference section */
 		FF106FE82437879A00723D3F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		FF106FEA2437937200723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		FF106FED243793A800723D3F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FF106FF12437958D00723D3F /* SpotifyAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthService.swift; sourceTree = "<group>"; };
 		FF13CAEB244B40EA00E99A5B /* SPTConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTConstant.swift; sourceTree = "<group>"; };
 		FF5270B024414D4F00C0EDC2 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
@@ -171,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD662E62437249000C0C3D6 /* SpotifyiOS.framework in Frameworks */,
-				FF106FEB2437937200723D3F /* Alamofire.framework in Frameworks */,
 				FFB8163F2438A9CD00064E21 /* Kingfisher.framework in Frameworks */,
 				FFBD70C52437835400E6AD9A /* SpotifyLogin.framework in Frameworks */,
 			);
@@ -369,7 +361,6 @@
 			isa = PBXGroup;
 			children = (
 				FFB8163E2438A9CD00064E21 /* Kingfisher.framework */,
-				FF106FEA2437937200723D3F /* Alamofire.framework */,
 				FFBD70C42437835300E6AD9A /* SpotifyLogin.framework */,
 			);
 			name = Frameworks;
@@ -379,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				FFB816412438A9E700064E21 /* Kingfisher.framework */,
-				FF106FED243793A800723D3F /* Alamofire.framework */,
 				FFBD70CA2437847D00E6AD9A /* SpotifyLogin.framework */,
 				FFD662E72437262500C0C3D6 /* Spotify-Clone-Bridging-Header.h */,
 				FFD662B42437222D00C0C3D6 /* Spotify-Clone */,
