@@ -19,7 +19,7 @@ The purpose of the app is to implement a Desing System using design tokens, Obje
 
 :exclamation: You need to set up a client app on the [Spotify developer site](https://developer.spotify.com/dashboard/). Use the client id, client secret, and redirect URL from there inside the SpotifyAuthService class. Check the [SpotifyLogin github page](https://github.com/spotify/SpotifyLogin) for detailed steps on how to set this up.
 
-run `carthage update --platform iOS` to install the dependencies.
+Run `carthage update --platform iOS` to install the dependencies.
 
 <br>
 <p align="center">
