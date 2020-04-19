@@ -48,11 +48,11 @@ class NetworkTests: XCTestCase {
     
     func testArtistsNetworkCallForCount() {
         // given
-        let sptService = SpotifyWebAPIService(networkService: NetworkService())
+        let sut = SpotifyWebAPIService(networkService: NetworkService())
         let itemType = ItemType.artists
         
         // when
-        sptService.sptUserTop(itemType: itemType, count: 2) { ( tracks, artists , error) in
+        sut.sptUserTop(itemType: itemType, count: 2) { ( tracks, artists , error) in
             if let error = error {
                 print("Failed to get tracks: ", error)
                 XCTAssertThrowsError(error)

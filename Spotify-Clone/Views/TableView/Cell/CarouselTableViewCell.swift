@@ -69,7 +69,6 @@ class CarouselTableViewCell: UITableViewCell {
         labelStackView.addArrangedSubview(sectionLabel)
     
         // container stack view
-        containerStackView.addArrangedSubview(UIView())
         containerStackView.addArrangedSubview(labelStackView)
         containerStackView.addArrangedSubview(itemCollectionView)
         itemCollectionView.anchor(top: nil, leading: containerStackView.leadingAnchor, bottom: nil, trailing: containerStackView.trailingAnchor)
