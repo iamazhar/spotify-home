@@ -32,7 +32,7 @@ Code follows the [Raywenderlich style guide](https://github.com/raywenderlich/sw
 
 ## Dependencies
 
-Carthage dependencies have been included in the repo for convenience. You can add them to your .gitignore to not include them in your fork
+run `carthage update --platform iOS` to install the dependencies.
 
 Carthage frameworks used
 - github "spotify/SpotifyLogin"
