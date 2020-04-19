@@ -52,7 +52,7 @@ class GridCollectionViewCell: SPTItemCell {
     // MARK: - Methods
     private func setupLayout() {
         addSubview(mediaItemView)
-        mediaItemView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        mediaItemView.fillSuperview()
     }
     
 }

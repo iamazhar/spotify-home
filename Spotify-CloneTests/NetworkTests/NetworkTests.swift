@@ -17,12 +17,26 @@ class NetworkTests: XCTestCase {
         SpotifyAuthService.shared.sptCheckAccessToken { (exists, token, error) in
             if let error = error {
                 print("Failed to check token:", error)
-                XCTAssertThrowsError(error)
             }
             if let token = token {
                 self.accessToken = token
+                XCTAssertNotNil(token)
             }
         }
+    }
+    
+    func testParseResultDecodedObjectNotNil() {
+        // give
+        let jsonData = StaticData.data!
+        
+        // when
+        if let sut: Result<Track> = NetworkService.parseResults(from: jsonData) {
+            // then
+            XCTAssertNotNil(sut)
+        } else {
+            XCTAssertTrue(false)
+        }
+        
     }
     
     func testTracksNetworkCallForCount() {
@@ -48,11 +62,11 @@ class NetworkTests: XCTestCase {
     
     func testArtistsNetworkCallForCount() {
         // given
-        let sptService = SpotifyWebAPIService(networkService: NetworkService())
+        let sut = SpotifyWebAPIService(networkService: NetworkService())
         let itemType = ItemType.artists
         
         // when
-        sptService.sptUserTop(itemType: itemType, count: 2) { ( tracks, artists , error) in
+        sut.sptUserTop(itemType: itemType, count: 2) { ( tracks, artists , error) in
             if let error = error {
                 print("Failed to get tracks: ", error)
                 XCTAssertThrowsError(error)
