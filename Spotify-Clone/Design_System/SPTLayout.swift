@@ -6,7 +6,7 @@
 //  Copyright © 2020 Azhar Anwar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Height for each section of the home screen
 public enum SPTHomeSectionHeight: CGFloat {

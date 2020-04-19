@@ -6,7 +6,7 @@
 //  Copyright © 2020 Azhar Anwar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum MediaItemType: String {
     case carousel, grid
