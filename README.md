@@ -1,7 +1,7 @@
 <p align="center">
   <img width="100" src="app-icon.png" />
    <br>
-  <h1 align = "center">Spotify Home</h1>
+  <h1 align = "center">Spotify Home :notes:</h1>
 </p>
 
 <p align="center">
