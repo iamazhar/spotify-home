@@ -27,7 +27,6 @@ class SpotifyAuthService {
         SpotifyLogin.shared.getAccessToken { (token, error) in
             if error != nil, token == nil {
                 completion(false, error)
-                return
             }
             completion(true, nil)
         }
@@ -54,7 +53,6 @@ extension SpotifyAuthService {
             if let error = error {
                 print("Failed to log in ")
                 completion(handled, error)
-                return
             }
             completion(handled, nil)
             return
@@ -68,7 +66,6 @@ extension SpotifyAuthService {
         SpotifyLogin.shared.getAccessToken { (token, error) in
             if error != nil, token == nil {
                 completion(false, nil, error)
-                return
             }
             completion(true, token, nil)
         }

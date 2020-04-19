@@ -16,7 +16,7 @@ class NetworkTests: XCTestCase {
     override func setUp() {
         SpotifyAuthService.shared.sptCheckAccessToken { (exists, token, error) in
             if let error = error {
-                print("Failed to check token:", error)
+                XCTAssertThrowsError(error, error.localizedDescription)
             }
             if let token = token {
                 self.accessToken = token
@@ -47,8 +47,7 @@ class NetworkTests: XCTestCase {
         // when
         sut.sptUserTop(itemType: itemType, count: 2) { ( tracks , artists, error) in
             if let error = error {
-                print("Failed to get tracks: ", error)
-                XCTAssertThrowsError(error)
+                XCTAssertThrowsError(error, error.localizedDescription)
             }
             if let tracks = tracks {
                 // then
@@ -68,8 +67,7 @@ class NetworkTests: XCTestCase {
         // when
         sut.sptUserTop(itemType: itemType, count: 2) { ( tracks, artists , error) in
             if let error = error {
-                print("Failed to get tracks: ", error)
-                XCTAssertThrowsError(error)
+                XCTAssertThrowsError(error, error.localizedDescription)
             }
             if let artists = artists {
                 // then
